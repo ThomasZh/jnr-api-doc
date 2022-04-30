@@ -1,0 +1,46 @@
+{
+    "title": "Gitbook教程",
+    "description": "Gitbook电子书教程",
+    "author": "Breeze",
+    "language": "zh-hans",
+    "root": ".",
+    "plugins": [
+        "ace",
+        "theme-comscore",
+        "edit-link",
+        "tbfed-pagefooter",
+        "expandable-chapters",
+        "chapter-fold",
+        "back-to-top-button",
+        "code",
+        "pageview-count",
+        "popup",
+        "splitter",
+        "search-plus",
+        "-lunr",
+        "-search",
+        "anchors",
+        "mermaid-gb3"
+    ],
+    "styles": {
+        "website": "assets/continuum/cms.css",
+        "ebook": "styles/ebook.css",
+        "pdf": "styles/pdf.css",
+        "mobi": "styles/mobi.css",
+        "epub": "styles/epub.css"
+    },
+    "pluginsConfig": {
+        "edit-link": {
+            "base": "https://github.com/ThomasZh/jnr-api-doc",
+            "label": "Edit This Page"
+        },
+        "tbfed-pagefooter": {
+            "copyright": "&copy Cyber-Life.cn Studio",
+            "modify_label": "该文件修订时间：",
+            "modify_format": "YYYY-MM-DD HH:mm:ss"
+        },
+        "pluginsConfig": {
+            "expandable-chapters": {}
+        }
+    }
+}
