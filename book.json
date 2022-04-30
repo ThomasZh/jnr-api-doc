@@ -31,7 +31,7 @@
     },
     "pluginsConfig": {
         "edit-link": {
-            "base": "https://github.com/ThomasZh/jnr-api-doc",
+            "base": "https://github.com/ThomasZh/jnr-api-doc/blob/main/",
             "label": "Edit This Page"
         },
         "tbfed-pagefooter": {
