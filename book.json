@@ -1,7 +1,7 @@
 {
-    "title": "Gitbook教程",
-    "description": "Gitbook电子书教程",
-    "author": "Breeze",
+    "title": "Jnr-Api-Doc",
+    "description": "Jnr API Documents",
+    "author": "Thomas Zhang",
     "language": "zh-hans",
     "root": ".",
     "plugins": [
