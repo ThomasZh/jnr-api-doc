@@ -106,7 +106,7 @@ http://jnr.host:9022/api/auth/v3/menus
 | Code    | Message | Description |
 | --------- | ----------- | ----------- |
 | 200    | OK       | 操作成功 |
-| 400 | Bad Request | Role name not valided|
+| 400 | Bad Request | Input fields not valided|
 | 401 | Unauthorized | Not login |
 | 403 | Forbidden | 无此权限 |
 
@@ -161,7 +161,7 @@ http://jnr.host:9022/api/auth/v3/menus/:menuId
 | Code    | Message | Description |
 | --------- | ----------- | ----------- |
 | 200    | OK       | 操作成功 |
-| 400 | Bad Request | Role name not valided|
+| 400 | Bad Request | Input fields not valided|
 | 401 | Unauthorized | Not login |
 | 403 | Forbidden | 无此权限 |
 
@@ -190,10 +190,9 @@ http://jnr.host:9022/api/auth/v3/menus/:menuId
 | Code    | Message | Description |
 | --------- | ----------- | ----------- |
 | 200    | OK       | 操作成功 |
-| 400 | Bad Request | LoginName or md5pwd not valided|
 | 401 | Unauthorized | Not login |
 | 403 | Forbidden | 无此权限 |
-| 404 | Not Found | 无此角色 |
+| 404 | Not Found | 无此菜单 |
 
 ### Responses Example
 ```
@@ -220,7 +219,6 @@ http://jnr.host:9022/api/auth/v3/menus/:menuId
 | Code    | Message | Description |
 | --------- | ----------- | ----------- |
 | 200    | OK       | 操作成功 |
-| 400 | Bad Request | LoginName or md5pwd not valided|
 | 401 | Unauthorized | Not login |
 | 403 | Forbidden | 无此权限 |
 | 404 | Not Found | 无此菜单 |

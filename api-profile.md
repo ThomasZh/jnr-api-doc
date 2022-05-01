@@ -44,7 +44,7 @@ http://jnr.host:9022/api/sys/profiles
 | Code    | Message | Description |
 | --------- | ----------- | ----------- |
 | 200    | OK       | 操作成功 |
-| 400 | Bad Request | Role name not valided|
+| 400 | Bad Request | Input fields not valided|
 | 401 | Unauthorized | Not login |
 | 403 | Forbidden | 无此权限 |
 
@@ -74,7 +74,6 @@ http://jnr.host:9022/api/sys/profiles
 | Code    | Message | Description |
 | --------- | ----------- | ----------- |
 | 200    | OK       | 操作成功 |
-| 400 | Bad Request | Role name not valided|
 | 401 | Unauthorized | Not login |
 | 403 | Forbidden | 无此权限 |
 
@@ -115,9 +114,9 @@ http://jnr.host:9022/api/sys/profiles/:userId
 | Code    | Message | Description |
 | --------- | ----------- | ----------- |
 | 200    | OK       | 操作成功 |
-| 400 | Bad Request | Role name not valided|
 | 401 | Unauthorized | Not login |
 | 403 | Forbidden | 无此权限 |
+| 404 | Not Found | 无此用户 |
 
 ### Responses Example
 ```
