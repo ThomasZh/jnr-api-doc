@@ -3,7 +3,7 @@
 ## Login
 Login use name and password.
 
-### Mothed
+### Method
 POST
 
 ### URL
@@ -54,7 +54,7 @@ http://jnr.host:9022/api/auth/v3/login
 ## Logout
 Logout after login.
 
-### Mothed
+### Method
 DELETE
 
 ### URL
@@ -78,7 +78,7 @@ http://jnr.host:9022/api/auth/v3/logout
 
 5分钟内有效，并且5分钟内不能重新发送。
 
-### Mothed
+### Method
 POST
 
 ### URL
@@ -108,7 +108,7 @@ http://jnr.host:9022/api/auth/v3/verify-code
 ## Lost password
 忘记密码操作
 
-### Mothed
+### Method
 POST
 
 ### URL
@@ -147,7 +147,7 @@ http://jnr.host:9022/api/auth/v3/lostpwd
 
 5分钟内有效，并且5分钟内不能重新发送。
 
-### Mothed
+### Method
 POST
 
 ### URL
@@ -176,7 +176,7 @@ http://jnr.host:9022/api/auth/v3/signup/verify-code
 ## Signup
 注册
 
-### Mothed
+### Method
 POST
 
 ### URL

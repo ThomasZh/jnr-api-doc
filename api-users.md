@@ -2,7 +2,7 @@
 
 ## 查询用户列表
 
-### Mothed
+### Method
 POST
 
 ### URL
@@ -64,7 +64,7 @@ http://jnr.host:9022/api/auth/v3/users/filter
 
 ## 锁定账号
 
-### Mothed
+### Method
 PUT
 
 ### URL
@@ -106,7 +106,7 @@ http://jnr.host:9022/api/auth/v3/users/lock
 
 ## 解锁账号
 
-### Mothed
+### Method
 PUT
 
 ### URL
@@ -147,7 +147,7 @@ http://jnr.host:9022/api/auth/v3/users/unlock
 
 ## 重置用户密码
 
-### Mothed
+### Method
 POST
 
 ### URL
@@ -192,7 +192,7 @@ http://jnr.host:9022/api/auth/v3/users/:userId
 
 ## 用户绑定角色
 
-### Mothed
+### Method
 PUT
 
 ### URL
@@ -222,7 +222,7 @@ http://jnr.host:9022/api/auth/v3/users/:userId/roles/:roleId
 
 ## 用户解绑角色
 
-### Mothed
+### Method
 DELETE
 
 ### URL
@@ -253,7 +253,7 @@ http://jnr.host:9022/api/auth/v3/users/:userId/roles/:roleId
 ## 查询用户的角色列表
 
 
-### Mothed
+### Method
 POST
 
 ### URL

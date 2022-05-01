@@ -2,7 +2,7 @@
 
 ## 查询角色列表
 
-### Mothed
+### Method
 POST
 
 ### URL
@@ -80,7 +80,7 @@ http://jnr.host:9022/api/auth/v3/roles/filter
 
 ## 锁定角色
 
-### Mothed
+### Method
 PUT
 
 ### URL
@@ -122,7 +122,7 @@ http://jnr.host:9022/api/auth/v3/roles/lock
 
 ## 解锁角色
 
-### Mothed
+### Method
 PUT
 
 ### URL
@@ -164,7 +164,7 @@ http://jnr.host:9022/api/auth/v3/roles/unlock
 
 ## 查询角色的用户列表
 
-### Mothed
+### Method
 POST
 
 ### URL
@@ -226,7 +226,7 @@ http://jnr.host:9022/api/auth/v3/roles/:roleId/users/filter
 
 ## 创建角色
 
-### Mothed
+### Method
 POST
 
 ### URL
@@ -268,7 +268,7 @@ http://jnr.host:9022/api/auth/v3/roles
 
 ## 修改角色
 
-### Mothed
+### Method
 POST
 
 ### URL
@@ -312,7 +312,7 @@ http://jnr.host:9022/api/auth/v3/roles/:roleId
 
 ## 删除角色
 
-### Mothed
+### Method
 DELETE
 
 ### URL
@@ -342,7 +342,7 @@ http://jnr.host:9022/api/auth/v3/roles/:roleId
 
 ## 查询角色
 
-### Mothed
+### Method
 GET
 
 ### URL
@@ -381,7 +381,7 @@ http://jnr.host:9022/api/auth/v3/roles/:roleId
 
 ## 查询角色的菜单列表
 
-### Mothed
+### Method
 POST
 
 ### URL
@@ -447,7 +447,7 @@ http://jnr.host:9022/api/auth/v3/roles/:roleId/menus/filter
 
 ## 绑定角色与菜单
 
-### Mothed
+### Method
 POST
 
 ### URL
@@ -475,7 +475,7 @@ http://jnr.host:9022/api/auth/v3/roles/menus/menuId
 
 ## 解绑角色与菜单
 
-### Mothed
+### Method
 DELETE
 
 ### URL

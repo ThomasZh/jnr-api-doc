@@ -5,3 +5,4 @@
 * [Users](api-users.md)
 * [Roles](api-roles.md)
 * [Menus](api-menus.md)
+* [Policies](api-policies.md)
