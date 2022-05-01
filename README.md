@@ -13,8 +13,9 @@
 
 ## Install
 ```
-npm install -g gitbook-cli
+nvm install 10
 nvm use 10
+npm install -g gitbook-cli
 gitbook install
 
 gitbook serve
