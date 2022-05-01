@@ -269,7 +269,7 @@ http://jnr.host:9022/api/auth/v3/roles
 ## 修改角色
 
 ### Method
-POST
+PUT
 
 ### URL
 http://jnr.host:9022/api/auth/v3/roles/:roleId

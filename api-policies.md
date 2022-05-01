@@ -124,7 +124,7 @@ http://jnr.host:9022/api/auth/v3/policies
 ## 修改策略 
 
 ### Method
-POST
+PUT
 
 ### URL
 http://jnr.host:9022/api/auth/v3/policies/:policyId

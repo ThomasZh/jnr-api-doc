@@ -122,7 +122,7 @@ http://jnr.host:9022/api/auth/v3/menus
 ## 修改菜单 
 
 ### Method
-POST
+PUT
 
 ### URL
 http://jnr.host:9022/api/auth/v3/menus/:menuId
