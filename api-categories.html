@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Auth · Jnr-Api-Doc</title>
+        <title>Categories · Jnr-Api-Doc</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -105,10 +105,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="api-users.html" />
+    <link rel="next" href="api-tags.html" />
     
     
-    <link rel="prev" href="./" />
+    <link rel="prev" href="api-files.html" />
     
 
     </head>
@@ -150,7 +150,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2" data-path="api-auth.html">
+        <li class="chapter " data-level="1.2" data-path="api-auth.html">
             
                 <a href="api-auth.html">
             
@@ -254,7 +254,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10" data-path="api-categories.html">
+        <li class="chapter active" data-level="1.10" data-path="api-categories.html">
             
                 <a href="api-categories.html">
             
@@ -323,7 +323,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Auth</a>
+        <a href="." >Categories</a>
     </h1>
 </div>
 
@@ -338,13 +338,31 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="api-auth"><a name="api-auth" class="plugin-anchor" href="#api-auth"><i class="fa fa-link" aria-hidden="true"></i></a>API Auth</h1>
-<h2 id="login"><a name="login" class="plugin-anchor" href="#login"><i class="fa fa-link" aria-hidden="true"></i></a>Login</h2>
-<p>Login use name and password.</p>
+                                <h1 id="api-categories"><a name="api-categories" class="plugin-anchor" href="#api-categories"><i class="fa fa-link" aria-hidden="true"></i></a>API Categories</h1>
+<h2 id="&#x67E5;&#x8BE2;&#x5206;&#x7C7B;&#x5217;&#x8868;"><a name="&#x67E5;&#x8BE2;&#x5206;&#x7C7B;&#x5217;&#x8868;" class="plugin-anchor" href="#&#x67E5;&#x8BE2;&#x5206;&#x7C7B;&#x5217;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;&#x8BE2;&#x5206;&#x7C7B;&#x5217;&#x8868;</h2>
 <h3 id="method"><a name="method" class="plugin-anchor" href="#method"><i class="fa fa-link" aria-hidden="true"></i></a>Method</h3>
 <p>POST</p>
 <h3 id="url"><a name="url" class="plugin-anchor" href="#url"><i class="fa fa-link" aria-hidden="true"></i></a>URL</h3>
-<p><a href="http://jnr.host:9022/api/auth/v3/login" target="_blank">http://jnr.host:9022/api/auth/v3/login</a></p>
+<p><a href="http://jnr.host:9022/api/cyber/categories/filter" target="_blank">http://jnr.host:9022/api/cyber/categories/filter</a></p>
+<h3 id="header"><a name="header" class="plugin-anchor" href="#header"><i class="fa fa-link" aria-hidden="true"></i></a>Header</h3>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization</td>
+<td>String</td>
+<td>Bearer accessToken</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
 <h3 id="body"><a name="body" class="plugin-anchor" href="#body"><i class="fa fa-link" aria-hidden="true"></i></a>Body</h3>
 <table>
 <thead>
@@ -357,23 +375,37 @@
 </thead>
 <tbody>
 <tr>
-<td>loginName</td>
-<td>String</td>
-<td>Login name as user</td>
-<td>Yes</td>
+<td>currPage</td>
+<td>int</td>
+<td>&#x5F53;&#x524D;&#x9875;&#x7801;&#x6570;&#xFF0C;&#x9ED8;&#x8BA4;=1</td>
+<td>No</td>
 </tr>
 <tr>
-<td>md5pwd</td>
-<td>String</td>
-<td>Use md5 function encrypt password</td>
-<td>Yes</td>
+<td>pageSize</td>
+<td>int</td>
+<td>&#x6BCF;&#x9875;&#x6570;&#x636E;&#x5927;&#x5C0F;&#xFF0C;&#x9ED8;&#x8BA4;=20</td>
+<td>No</td>
+</tr>
+<tr>
+<td>orders</td>
+<td>Object</td>
+<td>&#x6392;&#x5E8F;&#x89C4;&#x5219;&#xFF0C;&#x9ED8;&#x8BA4;=[]&#x3002;</td>
+<td>No</td>
+</tr>
+<tr>
+<td>searchs</td>
+<td>Object</td>
+<td>&#x67E5;&#x8BE2;&#x6761;&#x4EF6;&#xFF0C;&#x9ED8;&#x8BA4;=[]&#x3002;</td>
+<td>No</td>
 </tr>
 </tbody>
 </table>
 <h3 id="request-example"><a name="request-example" class="plugin-anchor" href="#request-example"><i class="fa fa-link" aria-hidden="true"></i></a>Request Example</h3>
 <pre><code>{
-    &quot;loginName&quot;: &quot;admin&quot;,
-    &quot;md5pwd&quot;: &quot;e10adc3949ba59abbe56e057f20f883e&quot;
+    &quot;currPage&quot;: 1,
+    &quot;pageSize&quot;: 20,
+    &quot;orders&quot;: [{ &quot;column&quot;: &quot;priority&quot;, &quot;dir&quot;: &quot;asc&quot; }],
+    &quot;searchs&quot;: [{ &quot;column&quot;: &quot;name&quot;, &quot;op&quot;: &quot;like&quot;, &quot;value&quot;: &quot;linux&quot; }]
 }
 </code></pre><h3 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h3>
 <table>
@@ -388,17 +420,17 @@
 <tr>
 <td>200</td>
 <td>OK</td>
-<td>Login success</td>
+<td>Query success</td>
 </tr>
 <tr>
-<td>400</td>
-<td>Bad Request</td>
-<td>LoginName or md5pwd not valided</td>
+<td>401</td>
+<td>Unauthorized</td>
+<td>Not login</td>
 </tr>
 <tr>
-<td>404</td>
-<td>Not Found</td>
-<td>LoginName or password is wrong</td>
+<td>403</td>
+<td>Forbidden</td>
+<td>&#x65E0;&#x6B64;&#x6743;&#x9650;</td>
 </tr>
 </tbody>
 </table>
@@ -406,25 +438,193 @@
 <pre><code>{
     &quot;errCode&quot;: 200,
     &quot;errMsg&quot;: &quot;Success&quot;,
-    &quot;sessionTicket&quot;: {
-        &quot;accessToken&quot;: &quot;f58403b6c84211ec92aa38c9860954df&quot;,
-        &quot;expiresAt&quot;: 1651899845,
-        &quot;scope&quot;: &quot;user&quot;,
-        &quot;tokenType&quot;: &quot;Bearer&quot;,
-        &quot;userId&quot;: &quot;800be36b639211ebb61b821700fd42c0&quot;,
-        &quot;refreshToken&quot;: &quot;f5840b5ec84211ec92aa38c9860954df&quot;,
-        &quot;loginName&quot;: &quot;admin&quot;,
-        &quot;roleIds&quot;: &quot;507b9fd4646711ebb586821700fd42c0&quot;,
-        &quot;roleNames&quot;: &quot;Administrator&quot;,
-        &quot;companyId&quot;: &quot;d62e5f58cf3b11eba543a45e60efbf2d&quot;
-    }
+    &quot;currPage&quot;: 1,
+    &quot;pageSize&quot;: 10,
+    &quot;totalNum&quot;: 9,
+    &quot;totalPage&quot;: 1,
+    &quot;datas&quot;: [
+        {
+            &quot;id&quot;: &quot;1917f866ce5911ec85a638c9860954df&quot;,
+            &quot;name&quot;: &quot;ui&quot;,
+            &quot;num&quot;: 36
+        },
+                ......
+    ]
 }
-</code></pre><h2 id="logout"><a name="logout" class="plugin-anchor" href="#logout"><i class="fa fa-link" aria-hidden="true"></i></a>Logout</h2>
-<p>Logout after login.</p>
+</code></pre><h2 id="&#x521B;&#x5EFA;&#x5206;&#x7C7B;"><a name="&#x521B;&#x5EFA;&#x5206;&#x7C7B;" class="plugin-anchor" href="#&#x521B;&#x5EFA;&#x5206;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521B;&#x5EFA;&#x5206;&#x7C7B;</h2>
+<h3 id="method"><a name="method" class="plugin-anchor" href="#method"><i class="fa fa-link" aria-hidden="true"></i></a>Method</h3>
+<p>POST</p>
+<h3 id="url"><a name="url" class="plugin-anchor" href="#url"><i class="fa fa-link" aria-hidden="true"></i></a>URL</h3>
+<p><a href="http://jnr.host:9022/api/cyber/categories" target="_blank">http://jnr.host:9022/api/cyber/categories</a></p>
+<h3 id="header"><a name="header" class="plugin-anchor" href="#header"><i class="fa fa-link" aria-hidden="true"></i></a>Header</h3>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization</td>
+<td>String</td>
+<td>Bearer accessToken</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="body"><a name="body" class="plugin-anchor" href="#body"><i class="fa fa-link" aria-hidden="true"></i></a>Body</h3>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>String</td>
+<td>&#x5206;&#x7C7B;&#x540D;&#x79F0;</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="request-example"><a name="request-example" class="plugin-anchor" href="#request-example"><i class="fa fa-link" aria-hidden="true"></i></a>Request Example</h3>
+<pre><code>{
+    &quot;name&quot;: &quot;linux&quot;,
+}
+</code></pre><h3 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h3>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Message</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td>OK</td>
+<td>&#x64CD;&#x4F5C;&#x6210;&#x529F;</td>
+</tr>
+<tr>
+<td>400</td>
+<td>Bad Request</td>
+<td>Input fields not valided</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized</td>
+<td>Not login</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden</td>
+<td>&#x65E0;&#x6B64;&#x6743;&#x9650;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="responses-example"><a name="responses-example" class="plugin-anchor" href="#responses-example"><i class="fa fa-link" aria-hidden="true"></i></a>Responses Example</h3>
+<pre><code>{
+    &quot;errCode&quot;: 200,
+    &quot;errMsg&quot;: &quot;Success&quot;,
+    &quot;data&quot;: &quot;46f7083dd6b611ec98b038c9860954df&quot;
+}
+</code></pre><h2 id="&#x4FEE;&#x6539;&#x5206;&#x7C7B;"><a name="&#x4FEE;&#x6539;&#x5206;&#x7C7B;" class="plugin-anchor" href="#&#x4FEE;&#x6539;&#x5206;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4FEE;&#x6539;&#x5206;&#x7C7B;</h2>
+<h3 id="method"><a name="method" class="plugin-anchor" href="#method"><i class="fa fa-link" aria-hidden="true"></i></a>Method</h3>
+<p>PUT</p>
+<h3 id="url"><a name="url" class="plugin-anchor" href="#url"><i class="fa fa-link" aria-hidden="true"></i></a>URL</h3>
+<p><a href="http://jnr.host:9022/api/cyber/categories/:categoryId" target="_blank">http://jnr.host:9022/api/cyber/categories/:categoryId</a></p>
+<h3 id="header"><a name="header" class="plugin-anchor" href="#header"><i class="fa fa-link" aria-hidden="true"></i></a>Header</h3>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization</td>
+<td>String</td>
+<td>Bearer accessToken</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="body"><a name="body" class="plugin-anchor" href="#body"><i class="fa fa-link" aria-hidden="true"></i></a>Body</h3>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>String</td>
+<td>&#x5206;&#x7C7B;&#x540D;&#x79F0;</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="request-example"><a name="request-example" class="plugin-anchor" href="#request-example"><i class="fa fa-link" aria-hidden="true"></i></a>Request Example</h3>
+<pre><code>{
+    &quot;name&quot;: &quot;linux&quot;,
+}
+</code></pre><h3 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h3>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Message</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td>OK</td>
+<td>&#x64CD;&#x4F5C;&#x6210;&#x529F;</td>
+</tr>
+<tr>
+<td>400</td>
+<td>Bad Request</td>
+<td>Input fields not valided</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized</td>
+<td>Not login</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden</td>
+<td>&#x65E0;&#x6B64;&#x6743;&#x9650;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="responses-example"><a name="responses-example" class="plugin-anchor" href="#responses-example"><i class="fa fa-link" aria-hidden="true"></i></a>Responses Example</h3>
+<pre><code>{
+    &quot;errCode&quot;: 200,
+    &quot;errMsg&quot;: &quot;Success&quot;
+}
+</code></pre><h2 id="&#x5220;&#x9664;&#x5206;&#x7C7B;"><a name="&#x5220;&#x9664;&#x5206;&#x7C7B;" class="plugin-anchor" href="#&#x5220;&#x9664;&#x5206;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5220;&#x9664;&#x5206;&#x7C7B;</h2>
 <h3 id="method"><a name="method" class="plugin-anchor" href="#method"><i class="fa fa-link" aria-hidden="true"></i></a>Method</h3>
 <p>DELETE</p>
 <h3 id="url"><a name="url" class="plugin-anchor" href="#url"><i class="fa fa-link" aria-hidden="true"></i></a>URL</h3>
-<p><a href="http://jnr.host:9022/api/auth/v3/logout" target="_blank">http://jnr.host:9022/api/auth/v3/logout</a></p>
+<p><a href="http://jnr.host:9022/api/cyber/categories/:categoryId" target="_blank">http://jnr.host:9022/api/cyber/categories/:categoryId</a></p>
 <h3 id="header"><a name="header" class="plugin-anchor" href="#header"><i class="fa fa-link" aria-hidden="true"></i></a>Header</h3>
 <table>
 <thead>
@@ -457,80 +657,36 @@
 <tr>
 <td>200</td>
 <td>OK</td>
-<td>Login success</td>
+<td>&#x64CD;&#x4F5C;&#x6210;&#x529F;</td>
 </tr>
 <tr>
 <td>401</td>
 <td>Unauthorized</td>
 <td>Not login</td>
 </tr>
-</tbody>
-</table>
-<h2 id="send-lost-password-verify-code"><a name="send-lost-password-verify-code" class="plugin-anchor" href="#send-lost-password-verify-code"><i class="fa fa-link" aria-hidden="true"></i></a>Send lost password verify code</h2>
-<p>&#x5FD8;&#x8BB0;&#x5BC6;&#x7801;&#x64CD;&#x4F5C;&#x65F6;&#x53D1;&#x9001;&#x83B7;&#x53D6;&#x9A8C;&#x8BC1;&#x7801;&#x3002;</p>
-<p>&#x8F93;&#x5165;&#x7684;loginName&#x8054;&#x7CFB;&#x65B9;&#x5F0F;&#xFF08;&#x624B;&#x673A;&#x6216;email&#xFF09;&#x4F1A;&#x6536;&#x5230;&#x77ED;&#x4FE1;&#x6216;&#x4FE1;&#x4EF6;&#xFF0C;&#x5185;&#x5BB9;&#x4E2D;&#x5305;&#x542B;&#x9A8C;&#x8BC1;&#x7801;&#x3002;</p>
-<p>5&#x5206;&#x949F;&#x5185;&#x6709;&#x6548;&#xFF0C;&#x5E76;&#x4E14;5&#x5206;&#x949F;&#x5185;&#x4E0D;&#x80FD;&#x91CD;&#x65B0;&#x53D1;&#x9001;&#x3002;</p>
-<h3 id="method"><a name="method" class="plugin-anchor" href="#method"><i class="fa fa-link" aria-hidden="true"></i></a>Method</h3>
-<p>POST</p>
-<h3 id="url"><a name="url" class="plugin-anchor" href="#url"><i class="fa fa-link" aria-hidden="true"></i></a>URL</h3>
-<p><a href="http://jnr.host:9022/api/auth/v3/verify-code" target="_blank">http://jnr.host:9022/api/auth/v3/verify-code</a></p>
-<h3 id="body"><a name="body" class="plugin-anchor" href="#body"><i class="fa fa-link" aria-hidden="true"></i></a>Body</h3>
-<table>
-<thead>
 <tr>
-<th>Key</th>
-<th>Type</th>
-<th>Description</th>
-<th>Required</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>loginName</td>
-<td>String</td>
-<td>Login name as user</td>
-<td>Yes</td>
-</tr>
-</tbody>
-</table>
-<h3 id="request-example"><a name="request-example" class="plugin-anchor" href="#request-example"><i class="fa fa-link" aria-hidden="true"></i></a>Request Example</h3>
-<pre><code>{
-    &quot;loginName&quot;: &quot;admin&quot;
-}
-</code></pre><h3 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h3>
-<table>
-<thead>
-<tr>
-<th>Code</th>
-<th>Message</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>200</td>
-<td>OK</td>
-<td>Send verify code success</td>
-</tr>
-<tr>
-<td>400</td>
-<td>Bad Request</td>
-<td>LoginName or md5pwd not valided</td>
+<td>403</td>
+<td>Forbidden</td>
+<td>&#x65E0;&#x6B64;&#x6743;&#x9650;</td>
 </tr>
 <tr>
 <td>404</td>
 <td>Not Found</td>
-<td>LoginName is not exist</td>
+<td>&#x65E0;&#x6B64;&#x89D2;&#x8272;</td>
 </tr>
 </tbody>
 </table>
-<h2 id="lost-password"><a name="lost-password" class="plugin-anchor" href="#lost-password"><i class="fa fa-link" aria-hidden="true"></i></a>Lost password</h2>
-<p>&#x5FD8;&#x8BB0;&#x5BC6;&#x7801;&#x64CD;&#x4F5C;</p>
+<h3 id="responses-example"><a name="responses-example" class="plugin-anchor" href="#responses-example"><i class="fa fa-link" aria-hidden="true"></i></a>Responses Example</h3>
+<pre><code>{
+    &quot;errCode&quot;: 200,
+    &quot;errMsg&quot;: &quot;Success&quot;
+}
+</code></pre><h2 id="&#x67E5;&#x8BE2;&#x5206;&#x7C7B;"><a name="&#x67E5;&#x8BE2;&#x5206;&#x7C7B;" class="plugin-anchor" href="#&#x67E5;&#x8BE2;&#x5206;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;&#x8BE2;&#x5206;&#x7C7B;</h2>
 <h3 id="method"><a name="method" class="plugin-anchor" href="#method"><i class="fa fa-link" aria-hidden="true"></i></a>Method</h3>
-<p>POST</p>
+<p>GET</p>
 <h3 id="url"><a name="url" class="plugin-anchor" href="#url"><i class="fa fa-link" aria-hidden="true"></i></a>URL</h3>
-<p><a href="http://jnr.host:9022/api/auth/v3/lostpwd" target="_blank">http://jnr.host:9022/api/auth/v3/lostpwd</a></p>
-<h3 id="body"><a name="body" class="plugin-anchor" href="#body"><i class="fa fa-link" aria-hidden="true"></i></a>Body</h3>
+<p><a href="http://jnr.host:9022/api/cyber/categories/:categoryId" target="_blank">http://jnr.host:9022/api/cyber/categories/:categoryId</a></p>
+<h3 id="header"><a name="header" class="plugin-anchor" href="#header"><i class="fa fa-link" aria-hidden="true"></i></a>Header</h3>
 <table>
 <thead>
 <tr>
@@ -542,32 +698,14 @@
 </thead>
 <tbody>
 <tr>
-<td>loginName</td>
+<td>Authorization</td>
 <td>String</td>
-<td>Login name as user</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>md5pwd</td>
-<td>String</td>
-<td>Use md5 function encrypt password</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>code</td>
-<td>String</td>
-<td>&#x9A8C;&#x8BC1;&#x7801;</td>
+<td>Bearer accessToken</td>
 <td>Yes</td>
 </tr>
 </tbody>
 </table>
-<h3 id="request-example"><a name="request-example" class="plugin-anchor" href="#request-example"><i class="fa fa-link" aria-hidden="true"></i></a>Request Example</h3>
-<pre><code>{
-    &quot;loginName&quot;: &quot;admin&quot;,
-    &quot;md5pwd&quot;: &quot;e10adc3949ba59abbe56e057f20f883e&quot;,
-    &quot;code&quot;: 123456
-}
-</code></pre><h3 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h3>
+<h3 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h3>
 <table>
 <thead>
 <tr>
@@ -580,170 +718,36 @@
 <tr>
 <td>200</td>
 <td>OK</td>
-<td>Modify password success</td>
+<td>&#x64CD;&#x4F5C;&#x6210;&#x529F;</td>
 </tr>
 <tr>
-<td>400</td>
-<td>Bad Request</td>
-<td>LoginName or md5pwd not valided</td>
+<td>401</td>
+<td>Unauthorized</td>
+<td>Not login</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden</td>
+<td>&#x65E0;&#x6B64;&#x6743;&#x9650;</td>
 </tr>
 <tr>
 <td>404</td>
 <td>Not Found</td>
-<td>LoginName is not exist</td>
-</tr>
-<tr>
-<td>408</td>
-<td>Timeout</td>
-<td>&#x6821;&#x9A8C;&#x7801;&#x8FC7;&#x671F;</td>
-</tr>
-<tr>
-<td>412</td>
-<td>Precondition Failed</td>
-<td>&#x6821;&#x9A8C;&#x7801;&#x9519;&#x8BEF;</td>
+<td>&#x65E0;&#x6B64;&#x7B56;&#x7565;</td>
 </tr>
 </tbody>
 </table>
-<h2 id="send-signup-verify-code"><a name="send-signup-verify-code" class="plugin-anchor" href="#send-signup-verify-code"><i class="fa fa-link" aria-hidden="true"></i></a>Send signup verify code</h2>
-<p>&#x6CE8;&#x518C;&#x65F6;&#x53D1;&#x9001;&#x6821;&#x9A8C;&#x7801;&#x3002;</p>
-<p>&#x8F93;&#x5165;&#x7684;loginName&#x8054;&#x7CFB;&#x65B9;&#x5F0F;&#xFF08;&#x624B;&#x673A;&#x6216;email&#xFF09;&#x4F1A;&#x6536;&#x5230;&#x77ED;&#x4FE1;&#x6216;&#x4FE1;&#x4EF6;&#xFF0C;&#x5185;&#x5BB9;&#x4E2D;&#x5305;&#x542B;&#x9A8C;&#x8BC1;&#x7801;&#x3002;</p>
-<p>5&#x5206;&#x949F;&#x5185;&#x6709;&#x6548;&#xFF0C;&#x5E76;&#x4E14;5&#x5206;&#x949F;&#x5185;&#x4E0D;&#x80FD;&#x91CD;&#x65B0;&#x53D1;&#x9001;&#x3002;</p>
-<h3 id="method"><a name="method" class="plugin-anchor" href="#method"><i class="fa fa-link" aria-hidden="true"></i></a>Method</h3>
-<p>POST</p>
-<h3 id="url"><a name="url" class="plugin-anchor" href="#url"><i class="fa fa-link" aria-hidden="true"></i></a>URL</h3>
-<p><a href="http://jnr.host:9022/api/auth/v3/signup/verify-code" target="_blank">http://jnr.host:9022/api/auth/v3/signup/verify-code</a></p>
-<h3 id="body"><a name="body" class="plugin-anchor" href="#body"><i class="fa fa-link" aria-hidden="true"></i></a>Body</h3>
-<table>
-<thead>
-<tr>
-<th>Key</th>
-<th>Type</th>
-<th>Description</th>
-<th>Required</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>loginName</td>
-<td>String</td>
-<td>Login name as user</td>
-<td>Yes</td>
-</tr>
-</tbody>
-</table>
-<h3 id="request-example"><a name="request-example" class="plugin-anchor" href="#request-example"><i class="fa fa-link" aria-hidden="true"></i></a>Request Example</h3>
+<h3 id="responses-example"><a name="responses-example" class="plugin-anchor" href="#responses-example"><i class="fa fa-link" aria-hidden="true"></i></a>Responses Example</h3>
 <pre><code>{
-    &quot;loginName&quot;: &quot;admin&quot;
+    &quot;errCode&quot;: 200,
+    &quot;errMsg&quot;: &quot;Success&quot;,
+    &quot;data&quot;:    {
+        &quot;id&quot;: &quot;043c46422aa111ec881d38c9860954df&quot;,
+        &quot;name&quot;: &quot;linux&quot;,
+    }    
 }
-</code></pre><h3 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h3>
-<table>
-<thead>
-<tr>
-<th>Code</th>
-<th>Message</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>200</td>
-<td>OK</td>
-<td>Send verify code success</td>
-</tr>
-<tr>
-<td>400</td>
-<td>Bad Request</td>
-<td>LoginName not valided</td>
-</tr>
-<tr>
-<td>409</td>
-<td>Conflict</td>
-<td>&#x7528;&#x6237;&#x540D;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;</td>
-</tr>
-</tbody>
-</table>
-<h2 id="signup"><a name="signup" class="plugin-anchor" href="#signup"><i class="fa fa-link" aria-hidden="true"></i></a>Signup</h2>
-<p>&#x6CE8;&#x518C;</p>
-<h3 id="method"><a name="method" class="plugin-anchor" href="#method"><i class="fa fa-link" aria-hidden="true"></i></a>Method</h3>
-<p>POST</p>
-<h3 id="url"><a name="url" class="plugin-anchor" href="#url"><i class="fa fa-link" aria-hidden="true"></i></a>URL</h3>
-<p><a href="http://jnr.host:9022/api/auth/v3/signup" target="_blank">http://jnr.host:9022/api/auth/v3/signup</a></p>
-<h3 id="body"><a name="body" class="plugin-anchor" href="#body"><i class="fa fa-link" aria-hidden="true"></i></a>Body</h3>
-<table>
-<thead>
-<tr>
-<th>Key</th>
-<th>Type</th>
-<th>Description</th>
-<th>Required</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>loginName</td>
-<td>String</td>
-<td>Login name as user</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>md5pwd</td>
-<td>String</td>
-<td>Use md5 function encrypt password</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>code</td>
-<td>String</td>
-<td>&#x9A8C;&#x8BC1;&#x7801;</td>
-<td>Yes</td>
-</tr>
-</tbody>
-</table>
-<h3 id="request-example"><a name="request-example" class="plugin-anchor" href="#request-example"><i class="fa fa-link" aria-hidden="true"></i></a>Request Example</h3>
-<pre><code>{
-    &quot;loginName&quot;: &quot;admin&quot;,
-    &quot;md5pwd&quot;: &quot;e10adc3949ba59abbe56e057f20f883e&quot;,
-    &quot;code&quot;: 123456
-}
-</code></pre><h3 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h3>
-<table>
-<thead>
-<tr>
-<th>Code</th>
-<th>Message</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>200</td>
-<td>OK</td>
-<td>Modify password success</td>
-</tr>
-<tr>
-<td>400</td>
-<td>Bad Request</td>
-<td>LoginName or md5pwd not valided</td>
-</tr>
-<tr>
-<td>408</td>
-<td>Timeout</td>
-<td>&#x6821;&#x9A8C;&#x7801;&#x8FC7;&#x671F;</td>
-</tr>
-<tr>
-<td>409</td>
-<td>Conflict</td>
-<td>&#x7528;&#x6237;&#x540D;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;</td>
-</tr>
-<tr>
-<td>412</td>
-<td>Precondition Failed</td>
-<td>&#x6821;&#x9A8C;&#x7801;&#x9519;&#x8BEF;</td>
-</tr>
-</tbody>
-</table>
-<footer class="page-footer"><span class="copyright">&#xA9; Cyber-Life.cn Studio all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2022-05-01 08:45:53
+</code></pre><footer class="page-footer"><span class="copyright">&#xA9; Cyber-Life.cn Studio all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2022-05-18 22:27:18
 </span></footer>
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
@@ -772,12 +776,12 @@
 
             
                 
-                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                <a href="api-files.html" class="navigation navigation-prev " aria-label="Previous page: Files">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="api-users.html" class="navigation navigation-next " aria-label="Next page: Users">
+                <a href="api-tags.html" class="navigation navigation-next " aria-label="Next page: Tags">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -788,7 +792,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Auth","level":"1.2","depth":1,"next":{"title":"Users","level":"1.3","depth":1,"path":"api-users.md","ref":"api-users.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","ace","theme-comscore","edit-link","tbfed-pagefooter","expandable-chapters","chapter-fold","back-to-top-button","code","pageview-count","popup","splitter","search-plus","-lunr","-search","anchors","mermaid-gb3"],"root":".","styles":{"website":"assets/continuum/cms.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Cyber-Life.cn Studio","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"pluginsConfig":{"expandable-chapters":{}},"ace":{},"github":{"url":"https://github.com/ThomasZh/jnr-api-doc"},"splitter":{},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"theme-comscore":{},"back-to-top-button":{},"pageview-count":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/ThomasZh/jnr-api-doc/blob/main/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"Thomas Zhang","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Jnr-Api-Doc","language":"zh-hans","gitbook":"*","description":"Jnr API Documents"},"file":{"path":"api-auth.md","mtime":"2022-05-01T00:45:53.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-05-19T00:53:14.472Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Categories","level":"1.10","depth":1,"next":{"title":"Tags","level":"1.11","depth":1,"path":"api-tags.md","ref":"api-tags.md","articles":[]},"previous":{"title":"Files","level":"1.9","depth":1,"path":"api-files.md","ref":"api-files.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","ace","theme-comscore","edit-link","tbfed-pagefooter","expandable-chapters","chapter-fold","back-to-top-button","code","pageview-count","popup","splitter","search-plus","-lunr","-search","anchors","mermaid-gb3"],"root":".","styles":{"website":"assets/continuum/cms.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Cyber-Life.cn Studio","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"pluginsConfig":{"expandable-chapters":{}},"ace":{},"github":{"url":"https://github.com/ThomasZh/jnr-api-doc"},"splitter":{},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"theme-comscore":{},"back-to-top-button":{},"pageview-count":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/ThomasZh/jnr-api-doc/blob/main/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"Thomas Zhang","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Jnr-Api-Doc","language":"zh-hans","gitbook":"*","description":"Jnr API Documents"},"file":{"path":"api-categories.md","mtime":"2022-05-18T14:27:18.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-05-19T00:53:14.472Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
