@@ -28,7 +28,10 @@ http://jnr.host:9022/api/cyber/articles/filter
 	"currPage": 1,
 	"pageSize": 20,
     "orders": [{ "column": "ctime", "dir": "desc" }],
-    "searchs": [{ "column": "type", "op": "eq", "value": "notebook" }]
+    "searchs": [{ "column": "type", "op": "eq", "value": "notebook" },
+			{ "column": "categoryId", "op": "eq", "value": "85ec8c28d31c11eca01a38c9860954df" },
+			{ "column": "tagId", "op": "eq", "value": "85ec8c28d31c11eca01a38c9860954df" }
+		]
 }
 ```
 
@@ -109,7 +112,10 @@ http://jnr.host:9022/api/cyber/mine/articles/filter
 	"currPage": 1,
 	"pageSize": 20,
     "orders": [{ "column": "ctime", "dir": "desc" }],
-    "searchs": [{ "column": "type", "op": "eq", "value": "notebook" }]
+		"searchs": [{ "column": "type", "op": "eq", "value": "notebook" },
+			{ "column": "categoryId", "op": "eq", "value": "85ec8c28d31c11eca01a38c9860954df" },
+			{ "column": "tagId", "op": "eq", "value": "85ec8c28d31c11eca01a38c9860954df" }
+		]
 }
 ```
 

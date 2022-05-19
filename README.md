@@ -26,6 +26,10 @@ gitbook serve
 
 ./build.sh
 上述命令默认将生成的静态网站输出到 _book 目录。
+
+git checkout gh-pages
+将 _book 目录下的*.html文件拷贝到当前目录下。
+提交代码
 ```
 
 ## [Demo](https://thomaszh.github.io/jnr-api-doc/)
