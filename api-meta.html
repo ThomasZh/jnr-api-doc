@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Articles · Jnr-Api-Doc</title>
+        <title>Meta · Jnr-Api-Doc</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -105,10 +105,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="api-meta.html" />
     
-    
-    <link rel="prev" href="api-tags.html" />
+    <link rel="prev" href="api-articles.html" />
     
 
     </head>
@@ -280,7 +278,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.12" data-path="api-articles.html">
+        <li class="chapter " data-level="1.12" data-path="api-articles.html">
             
                 <a href="api-articles.html">
             
@@ -293,7 +291,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.13" data-path="api-meta.html">
+        <li class="chapter active" data-level="1.13" data-path="api-meta.html">
             
                 <a href="api-meta.html">
             
@@ -336,7 +334,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Articles</a>
+        <a href="." >Meta</a>
     </h1>
 </div>
 
@@ -351,12 +349,92 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="api-articles"><a name="api-articles" class="plugin-anchor" href="#api-articles"><i class="fa fa-link" aria-hidden="true"></i></a>API Articles</h1>
-<h2 id="&#x67E5;&#x8BE2;&#x6587;&#x7AE0;&#x5217;&#x8868;"><a name="&#x67E5;&#x8BE2;&#x6587;&#x7AE0;&#x5217;&#x8868;" class="plugin-anchor" href="#&#x67E5;&#x8BE2;&#x6587;&#x7AE0;&#x5217;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;&#x8BE2;&#x6587;&#x7AE0;&#x5217;&#x8868;</h2>
+                                <h1 id="api-meta"><a name="api-meta" class="plugin-anchor" href="#api-meta"><i class="fa fa-link" aria-hidden="true"></i></a>API Meta</h1>
+<h2 id="&#x521B;&#x5EFA;&#x94B1;&#x5305;"><a name="&#x521B;&#x5EFA;&#x94B1;&#x5305;" class="plugin-anchor" href="#&#x521B;&#x5EFA;&#x94B1;&#x5305;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521B;&#x5EFA;&#x94B1;&#x5305;</h2>
 <h3 id="method"><a name="method" class="plugin-anchor" href="#method"><i class="fa fa-link" aria-hidden="true"></i></a>Method</h3>
 <p>POST</p>
 <h3 id="url"><a name="url" class="plugin-anchor" href="#url"><i class="fa fa-link" aria-hidden="true"></i></a>URL</h3>
-<p><a href="http://jnr.host:9022/api/cyber/articles/filter" target="_blank">http://jnr.host:9022/api/cyber/articles/filter</a></p>
+<p><a href="http://jnr.host:9022/api/meta/accounts" target="_blank">http://jnr.host:9022/api/meta/accounts</a></p>
+<h3 id="header"><a name="header" class="plugin-anchor" href="#header"><i class="fa fa-link" aria-hidden="true"></i></a>Header</h3>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization</td>
+<td>String</td>
+<td>Bearer accessToken</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="body"><a name="body" class="plugin-anchor" href="#body"><i class="fa fa-link" aria-hidden="true"></i></a>Body</h3>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sys</td>
+<td>String</td>
+<td>&#x7CFB;&#x7EDF;</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<h3 id="request-example"><a name="request-example" class="plugin-anchor" href="#request-example"><i class="fa fa-link" aria-hidden="true"></i></a>Request Example</h3>
+<pre><code>{
+    &quot;sys&quot;: &quot;OTC&quot;
+}
+</code></pre><h3 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h3>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Message</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td>OK</td>
+<td>Query success</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized</td>
+<td>Not login</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden</td>
+<td>&#x65E0;&#x6B64;&#x6743;&#x9650;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="responses-example"><a name="responses-example" class="plugin-anchor" href="#responses-example"><i class="fa fa-link" aria-hidden="true"></i></a>Responses Example</h3>
+<pre><code>{
+    &quot;errCode&quot;: 200,
+    &quot;errMsg&quot;: &quot;Success&quot;,
+    &quot;id&quot;: &quot;9902eac6e3c211ec80d238c9860954df&quot;
+}
+</code></pre><h2 id="&#x67E5;&#x8BE2;&#x6211;&#x7684;&#x94B1;&#x5305;&#x5217;&#x8868;"><a name="&#x67E5;&#x8BE2;&#x6211;&#x7684;&#x94B1;&#x5305;&#x5217;&#x8868;" class="plugin-anchor" href="#&#x67E5;&#x8BE2;&#x6211;&#x7684;&#x94B1;&#x5305;&#x5217;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;&#x8BE2;&#x6211;&#x7684;&#x94B1;&#x5305;&#x5217;&#x8868;</h2>
+<h3 id="method"><a name="method" class="plugin-anchor" href="#method"><i class="fa fa-link" aria-hidden="true"></i></a>Method</h3>
+<p>POST</p>
+<h3 id="url"><a name="url" class="plugin-anchor" href="#url"><i class="fa fa-link" aria-hidden="true"></i></a>URL</h3>
+<p><a href="http://jnr.host:9022/api/meta/accounts/mine/filter" target="_blank">http://jnr.host:9022/api/meta/accounts/mine/filter</a></p>
 <h3 id="header"><a name="header" class="plugin-anchor" href="#header"><i class="fa fa-link" aria-hidden="true"></i></a>Header</h3>
 <table>
 <thead>
@@ -417,11 +495,12 @@
 <pre><code>{
     &quot;currPage&quot;: 1,
     &quot;pageSize&quot;: 20,
-    &quot;orders&quot;: [{ &quot;column&quot;: &quot;ctime&quot;, &quot;dir&quot;: &quot;desc&quot; }],
-    &quot;searchs&quot;: [{ &quot;column&quot;: &quot;type&quot;, &quot;op&quot;: &quot;eq&quot;, &quot;value&quot;: &quot;notebook&quot; },
-            { &quot;column&quot;: &quot;categoryId&quot;, &quot;op&quot;: &quot;eq&quot;, &quot;value&quot;: &quot;85ec8c28d31c11eca01a38c9860954df&quot; },
-            { &quot;column&quot;: &quot;tagId&quot;, &quot;op&quot;: &quot;eq&quot;, &quot;value&quot;: &quot;85ec8c28d31c11eca01a38c9860954df&quot; }
-        ]
+    &quot;orders&quot;: [{
+        &quot;column&quot;: &quot;ctime&quot;,
+        &quot;dir&quot;: &quot;desc&quot;
+    }],
+    &quot;searchs&quot;: [
+    ],
 }
 </code></pre><h3 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h3>
 <table>
@@ -455,44 +534,30 @@
     &quot;errCode&quot;: 200,
     &quot;errMsg&quot;: &quot;Success&quot;,
     &quot;currPage&quot;: 1,
-    &quot;pageSize&quot;: 12,
-    &quot;totalNum&quot;: 24,
-    &quot;totalPage&quot;: 2,
+    &quot;pageSize&quot;: 20,
+    &quot;totalNum&quot;: 2,
+    &quot;totalPage&quot;: 1,
     &quot;datas&quot;: [
         {
-            &quot;id&quot;: &quot;85ec8c28d31c11eca01a38c9860954df&quot;,
-            &quot;type&quot;: &quot;markdown&quot;,
-            &quot;title&quot;: &quot;React + antd pro + umi &#x756A;&#x5916;&#x7BC7;&quot;,
-            &quot;description&quot;: &quot;&#x672C;&#x7BC7;&#x6587;&#x7AE0;&#x4E3B;&#x8981;&#x4ECB;&#x7ECD;&#x4ECE; 0 &#x4F7F;&#x7528;umi&#x642D;&#x5EFA;React&#x9879;&#x76EE;&#x7684;&#x8FC7;&#x7A0B;&#xFF0C;&#x8BB0;&#x5F55;&#x4E86;&#x76F8;&#x5173;umi&#x7684;&#x4F7F;&#x7528;&#x4EE5;&#x53CA;react&#x7684;&#x76F8;&#x5173;&#x77E5;&#x8BC6;&#x70B9;&#x3002;&quot;,
-            &quot;imgUrl&quot;: &quot;/static/api/tmpfiles/f/f947e59a95675bdb8e8317a06d33addf.jpeg&quot;,
-            &quot;ctime&quot;: &quot;05/14/2022&quot;,
-            &quot;mtime&quot;: &quot;05/18/2022&quot;,
-            &quot;status&quot;: 1,
-            &quot;readNum&quot;: 51,
-            &quot;likeNum&quot;: 0,
-            &quot;commNum&quot;: 0,
+            &quot;id&quot;: &quot;9cb184d6e2c111ecbb5a38c9860954df&quot;,
+            &quot;sys&quot;: &quot;OTC&quot;,
+            &quot;coinId&quot;: &quot;ETH&quot;,
             &quot;userId&quot;: &quot;800be36b639211ebb61b821700fd42c0&quot;,
-            &quot;key&quot;: &quot;85ec8c28d31c11eca01a38c9860954df&quot;,
-            &quot;author&quot;: {
-                &quot;userId&quot;: &quot;800be36b639211ebb61b821700fd42c0&quot;,
-                &quot;firstName&quot;: &quot;Thomas&quot;,
-                &quot;lastName&quot;: &quot;Zhang&quot;,
-                &quot;email&quot;: &quot;&quot;,
-                &quot;telephone&quot;: &quot;&quot;,
-                &quot;workphone&quot;: &quot;&quot;,
-                &quot;avatar&quot;: &quot;http://image.cyber-life.cn/cyber2022/01/12/831e1fc873a611ecaf6f5254006e0804&quot;,
-                &quot;jobTitle&quot;: &quot;Professor of Mathematical Analysis&quot;,
-                &quot;biography&quot;: &quot;Professor of Mathematical Analysis&quot;
-            }
+            &quot;balance&quot;: &quot;50.00000000&quot;,
+            &quot;frozenBalance&quot;: &quot;10.00000000&quot;,
+            &quot;status&quot;: 1,
+            &quot;ctime&quot;: &quot;2022-06-03 06:16:12&quot;,
+            &quot;mtime&quot;: &quot;2022-06-04 06:54:57&quot;,
+            &quot;username&quot;: &quot;Thomas Zhang&quot;
         },
-                ......
+    ......
     ]
 }
-</code></pre><h2 id="&#x67E5;&#x8BE2;&#x6211;&#x7684;&#x6587;&#x7AE0;&#x5217;&#x8868;"><a name="&#x67E5;&#x8BE2;&#x6211;&#x7684;&#x6587;&#x7AE0;&#x5217;&#x8868;" class="plugin-anchor" href="#&#x67E5;&#x8BE2;&#x6211;&#x7684;&#x6587;&#x7AE0;&#x5217;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;&#x8BE2;&#x6211;&#x7684;&#x6587;&#x7AE0;&#x5217;&#x8868;</h2>
+</code></pre><h2 id="&#x67E5;&#x8BE2;&#x94B1;&#x5305;&#x5217;&#x8868;"><a name="&#x67E5;&#x8BE2;&#x94B1;&#x5305;&#x5217;&#x8868;" class="plugin-anchor" href="#&#x67E5;&#x8BE2;&#x94B1;&#x5305;&#x5217;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;&#x8BE2;&#x94B1;&#x5305;&#x5217;&#x8868;</h2>
 <h3 id="method"><a name="method" class="plugin-anchor" href="#method"><i class="fa fa-link" aria-hidden="true"></i></a>Method</h3>
 <p>POST</p>
 <h3 id="url"><a name="url" class="plugin-anchor" href="#url"><i class="fa fa-link" aria-hidden="true"></i></a>URL</h3>
-<p><a href="http://jnr.host:9022/api/cyber/mine/articles/filter" target="_blank">http://jnr.host:9022/api/cyber/mine/articles/filter</a></p>
+<p><a href="http://jnr.host:9022/api/meta/accounts/filter" target="_blank">http://jnr.host:9022/api/meta/accounts/filter</a></p>
 <h3 id="header"><a name="header" class="plugin-anchor" href="#header"><i class="fa fa-link" aria-hidden="true"></i></a>Header</h3>
 <table>
 <thead>
@@ -553,11 +618,12 @@
 <pre><code>{
     &quot;currPage&quot;: 1,
     &quot;pageSize&quot;: 20,
-    &quot;orders&quot;: [{ &quot;column&quot;: &quot;ctime&quot;, &quot;dir&quot;: &quot;desc&quot; }],
-        &quot;searchs&quot;: [{ &quot;column&quot;: &quot;type&quot;, &quot;op&quot;: &quot;eq&quot;, &quot;value&quot;: &quot;notebook&quot; },
-            { &quot;column&quot;: &quot;categoryId&quot;, &quot;op&quot;: &quot;eq&quot;, &quot;value&quot;: &quot;85ec8c28d31c11eca01a38c9860954df&quot; },
-            { &quot;column&quot;: &quot;tagId&quot;, &quot;op&quot;: &quot;eq&quot;, &quot;value&quot;: &quot;85ec8c28d31c11eca01a38c9860954df&quot; }
-        ]
+    &quot;orders&quot;: [{
+        &quot;column&quot;: &quot;ctime&quot;,
+        &quot;dir&quot;: &quot;desc&quot;
+    }],
+    &quot;searchs&quot;: [
+    ],
 }
 </code></pre><h3 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h3>
 <table>
@@ -591,143 +657,30 @@
     &quot;errCode&quot;: 200,
     &quot;errMsg&quot;: &quot;Success&quot;,
     &quot;currPage&quot;: 1,
-    &quot;pageSize&quot;: 12,
-    &quot;totalNum&quot;: 24,
-    &quot;totalPage&quot;: 2,
+    &quot;pageSize&quot;: 20,
+    &quot;totalNum&quot;: 2,
+    &quot;totalPage&quot;: 1,
     &quot;datas&quot;: [
         {
-            &quot;id&quot;: &quot;85ec8c28d31c11eca01a38c9860954df&quot;,
-            &quot;type&quot;: &quot;markdown&quot;,
-            &quot;title&quot;: &quot;React + antd pro + umi &#x756A;&#x5916;&#x7BC7;&quot;,
-            &quot;description&quot;: &quot;&#x672C;&#x7BC7;&#x6587;&#x7AE0;&#x4E3B;&#x8981;&#x4ECB;&#x7ECD;&#x4ECE; 0 &#x4F7F;&#x7528;umi&#x642D;&#x5EFA;React&#x9879;&#x76EE;&#x7684;&#x8FC7;&#x7A0B;&#xFF0C;&#x8BB0;&#x5F55;&#x4E86;&#x76F8;&#x5173;umi&#x7684;&#x4F7F;&#x7528;&#x4EE5;&#x53CA;react&#x7684;&#x76F8;&#x5173;&#x77E5;&#x8BC6;&#x70B9;&#x3002;&quot;,
-            &quot;imgUrl&quot;: &quot;/static/api/tmpfiles/f/f947e59a95675bdb8e8317a06d33addf.jpeg&quot;,
-            &quot;ctime&quot;: &quot;05/14/2022&quot;,
-            &quot;mtime&quot;: &quot;05/18/2022&quot;,
-            &quot;status&quot;: 1,
-            &quot;readNum&quot;: 51,
-            &quot;likeNum&quot;: 0,
-            &quot;commNum&quot;: 0,
+            &quot;id&quot;: &quot;9cb184d6e2c111ecbb5a38c9860954df&quot;,
+            &quot;sys&quot;: &quot;OTC&quot;,
+            &quot;coinId&quot;: &quot;ETH&quot;,
             &quot;userId&quot;: &quot;800be36b639211ebb61b821700fd42c0&quot;,
-            &quot;key&quot;: &quot;85ec8c28d31c11eca01a38c9860954df&quot;,
-            &quot;author&quot;: {
-                &quot;userId&quot;: &quot;800be36b639211ebb61b821700fd42c0&quot;,
-                &quot;firstName&quot;: &quot;Thomas&quot;,
-                &quot;lastName&quot;: &quot;Zhang&quot;,
-                &quot;email&quot;: &quot;&quot;,
-                &quot;telephone&quot;: &quot;&quot;,
-                &quot;workphone&quot;: &quot;&quot;,
-                &quot;avatar&quot;: &quot;http://image.cyber-life.cn/cyber2022/01/12/831e1fc873a611ecaf6f5254006e0804&quot;,
-                &quot;jobTitle&quot;: &quot;Professor of Mathematical Analysis&quot;,
-                &quot;biography&quot;: &quot;Professor of Mathematical Analysis&quot;
-            }
+            &quot;balance&quot;: &quot;50.00000000&quot;,
+            &quot;frozenBalance&quot;: &quot;10.00000000&quot;,
+            &quot;status&quot;: 1,
+            &quot;ctime&quot;: &quot;2022-06-03 06:16:12&quot;,
+            &quot;mtime&quot;: &quot;2022-06-04 06:54:57&quot;,
+            &quot;username&quot;: &quot;Thomas Zhang&quot;
         },
-                ......
+    ......
     ]
 }
-</code></pre><h2 id="&#x521B;&#x5EFA;&#x6587;&#x7AE0;"><a name="&#x521B;&#x5EFA;&#x6587;&#x7AE0;" class="plugin-anchor" href="#&#x521B;&#x5EFA;&#x6587;&#x7AE0;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521B;&#x5EFA;&#x6587;&#x7AE0;</h2>
-<h3 id="method"><a name="method" class="plugin-anchor" href="#method"><i class="fa fa-link" aria-hidden="true"></i></a>Method</h3>
-<p>POST</p>
-<h3 id="url"><a name="url" class="plugin-anchor" href="#url"><i class="fa fa-link" aria-hidden="true"></i></a>URL</h3>
-<p><a href="http://jnr.host:9022/api/cyber/articles" target="_blank">http://jnr.host:9022/api/cyber/articles</a></p>
-<h3 id="header"><a name="header" class="plugin-anchor" href="#header"><i class="fa fa-link" aria-hidden="true"></i></a>Header</h3>
-<table>
-<thead>
-<tr>
-<th>Key</th>
-<th>Type</th>
-<th>Description</th>
-<th>Required</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Authorization</td>
-<td>String</td>
-<td>Bearer accessToken</td>
-<td>Yes</td>
-</tr>
-</tbody>
-</table>
-<h3 id="body"><a name="body" class="plugin-anchor" href="#body"><i class="fa fa-link" aria-hidden="true"></i></a>Body</h3>
-<table>
-<thead>
-<tr>
-<th>Key</th>
-<th>Type</th>
-<th>Description</th>
-<th>Required</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>title</td>
-<td>String</td>
-<td>&#x6587;&#x7AE0;&#x6807;&#x9898;</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>description</td>
-<td>String</td>
-<td>&#x6587;&#x7AE0;&#x63CF;&#x8FF0;</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>type</td>
-<td>String</td>
-<td>&#x6587;&#x7AE0;&#x7C7B;&#x578B;&#xFF1A;html,markdown,notebook</td>
-<td>Yes</td>
-</tr>
-</tbody>
-</table>
-<h3 id="request-example"><a name="request-example" class="plugin-anchor" href="#request-example"><i class="fa fa-link" aria-hidden="true"></i></a>Request Example</h3>
-<pre><code>{
-    &quot;title&quot;: &quot;linux&quot;,
-        &quot;description&quot;: &quot;linux&quot;,
-        &quot;type&quot;: &quot;markdown&quot;,
-}
-</code></pre><h3 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h3>
-<table>
-<thead>
-<tr>
-<th>Code</th>
-<th>Message</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>200</td>
-<td>OK</td>
-<td>&#x64CD;&#x4F5C;&#x6210;&#x529F;</td>
-</tr>
-<tr>
-<td>400</td>
-<td>Bad Request</td>
-<td>Input fields not valided</td>
-</tr>
-<tr>
-<td>401</td>
-<td>Unauthorized</td>
-<td>Not login</td>
-</tr>
-<tr>
-<td>403</td>
-<td>Forbidden</td>
-<td>&#x65E0;&#x6B64;&#x6743;&#x9650;</td>
-</tr>
-</tbody>
-</table>
-<h3 id="responses-example"><a name="responses-example" class="plugin-anchor" href="#responses-example"><i class="fa fa-link" aria-hidden="true"></i></a>Responses Example</h3>
-<pre><code>{
-    &quot;errCode&quot;: 200,
-    &quot;errMsg&quot;: &quot;Success&quot;,
-    &quot;data&quot;: &quot;46f7083dd6b611ec98b038c9860954df&quot;
-}
-</code></pre><h2 id="&#x4FEE;&#x6539;&#x6587;&#x7AE0;"><a name="&#x4FEE;&#x6539;&#x6587;&#x7AE0;" class="plugin-anchor" href="#&#x4FEE;&#x6539;&#x6587;&#x7AE0;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4FEE;&#x6539;&#x6587;&#x7AE0;</h2>
+</code></pre><h2 id="&#x9501;&#x5B9A;&#x94B1;&#x5305;"><a name="&#x9501;&#x5B9A;&#x94B1;&#x5305;" class="plugin-anchor" href="#&#x9501;&#x5B9A;&#x94B1;&#x5305;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9501;&#x5B9A;&#x94B1;&#x5305;</h2>
 <h3 id="method"><a name="method" class="plugin-anchor" href="#method"><i class="fa fa-link" aria-hidden="true"></i></a>Method</h3>
 <p>PUT</p>
 <h3 id="url"><a name="url" class="plugin-anchor" href="#url"><i class="fa fa-link" aria-hidden="true"></i></a>URL</h3>
-<p><a href="http://jnr.host:9022/api/cyber/articles/:articleId" target="_blank">http://jnr.host:9022/api/cyber/articles/:articleId</a></p>
+<p><a href="http://jnr.host:9022/api/meta/accounts/lock" target="_blank">http://jnr.host:9022/api/meta/accounts/lock</a></p>
 <h3 id="header"><a name="header" class="plugin-anchor" href="#header"><i class="fa fa-link" aria-hidden="true"></i></a>Header</h3>
 <table>
 <thead>
@@ -759,37 +712,18 @@
 </thead>
 <tbody>
 <tr>
-<td>title</td>
-<td>String</td>
-<td>&#x6587;&#x7AE0;&#x6807;&#x9898;</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>description</td>
-<td>String</td>
-<td>&#x6587;&#x7AE0;&#x63CF;&#x8FF0;</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>imgUrl</td>
-<td>String</td>
-<td>&#x56FE;&#x7247;&#x94FE;&#x63A5;</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>content</td>
-<td>Object</td>
-<td>&#x6587;&#x7AE0;&#x6BB5;&#x843D;</td>
+<td>ids</td>
+<td>array</td>
+<td>&#x94B1;&#x5305;ID&#x6570;&#x7EC4;</td>
 <td>Yes</td>
 </tr>
 </tbody>
 </table>
 <h3 id="request-example"><a name="request-example" class="plugin-anchor" href="#request-example"><i class="fa fa-link" aria-hidden="true"></i></a>Request Example</h3>
 <pre><code>{
-    &quot;title&quot;: &quot;linux&quot;,
-    &quot;description&quot;: &quot;linux&quot;,
-    &quot;imgUrl&quot;: &quot;/static/api/tmpfiles/b/b39a491a55765273977d239167d44f3b.png&quot;,
-    &quot;content&quot;: &quot;[{&quot;id&quot;:&quot;1&quot;,&quot;type&quot;:&quot;markdown&quot;,&quot;paragraph&quot;:&quot;#Title&quot;]&quot;,
+    &quot;ids&quot;: [
+        &quot;9cb184d6e2c111ecbb5a38c9860954df&quot;
+    ]
 }
 </code></pre><h3 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h3>
 <table>
@@ -804,12 +738,7 @@
 <tr>
 <td>200</td>
 <td>OK</td>
-<td>&#x64CD;&#x4F5C;&#x6210;&#x529F;</td>
-</tr>
-<tr>
-<td>400</td>
-<td>Bad Request</td>
-<td>Input fields not valided</td>
+<td>Query success</td>
 </tr>
 <tr>
 <td>401</td>
@@ -828,11 +757,11 @@
     &quot;errCode&quot;: 200,
     &quot;errMsg&quot;: &quot;Success&quot;
 }
-</code></pre><h2 id="&#x5220;&#x9664;&#x6587;&#x7AE0;"><a name="&#x5220;&#x9664;&#x6587;&#x7AE0;" class="plugin-anchor" href="#&#x5220;&#x9664;&#x6587;&#x7AE0;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5220;&#x9664;&#x6587;&#x7AE0;</h2>
+</code></pre><h2 id="&#x89E3;&#x9501;&#x94B1;&#x5305;"><a name="&#x89E3;&#x9501;&#x94B1;&#x5305;" class="plugin-anchor" href="#&#x89E3;&#x9501;&#x94B1;&#x5305;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x89E3;&#x9501;&#x94B1;&#x5305;</h2>
 <h3 id="method"><a name="method" class="plugin-anchor" href="#method"><i class="fa fa-link" aria-hidden="true"></i></a>Method</h3>
-<p>DELETE</p>
+<p>PUT</p>
 <h3 id="url"><a name="url" class="plugin-anchor" href="#url"><i class="fa fa-link" aria-hidden="true"></i></a>URL</h3>
-<p><a href="http://jnr.host:9022/api/cyber/articles/:articleId" target="_blank">http://jnr.host:9022/api/cyber/articles/:articleId</a></p>
+<p><a href="http://jnr.host:9022/api/meta/accounts/unlock" target="_blank">http://jnr.host:9022/api/meta/accounts/unlock</a></p>
 <h3 id="header"><a name="header" class="plugin-anchor" href="#header"><i class="fa fa-link" aria-hidden="true"></i></a>Header</h3>
 <table>
 <thead>
@@ -852,7 +781,32 @@
 </tr>
 </tbody>
 </table>
-<h3 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h3>
+<h3 id="body"><a name="body" class="plugin-anchor" href="#body"><i class="fa fa-link" aria-hidden="true"></i></a>Body</h3>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ids</td>
+<td>array</td>
+<td>&#x94B1;&#x5305;ID&#x6570;&#x7EC4;</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="request-example"><a name="request-example" class="plugin-anchor" href="#request-example"><i class="fa fa-link" aria-hidden="true"></i></a>Request Example</h3>
+<pre><code>{
+    &quot;ids&quot;: [
+        &quot;9cb184d6e2c111ecbb5a38c9860954df&quot;
+    ]
+}
+</code></pre><h3 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h3>
 <table>
 <thead>
 <tr>
@@ -865,7 +819,7 @@
 <tr>
 <td>200</td>
 <td>OK</td>
-<td>&#x64CD;&#x4F5C;&#x6210;&#x529F;</td>
+<td>Query success</td>
 </tr>
 <tr>
 <td>401</td>
@@ -877,11 +831,6 @@
 <td>Forbidden</td>
 <td>&#x65E0;&#x6B64;&#x6743;&#x9650;</td>
 </tr>
-<tr>
-<td>404</td>
-<td>Not Found</td>
-<td>&#x65E0;&#x6B64;&#x89D2;&#x8272;</td>
-</tr>
 </tbody>
 </table>
 <h3 id="responses-example"><a name="responses-example" class="plugin-anchor" href="#responses-example"><i class="fa fa-link" aria-hidden="true"></i></a>Responses Example</h3>
@@ -889,11 +838,11 @@
     &quot;errCode&quot;: 200,
     &quot;errMsg&quot;: &quot;Success&quot;
 }
-</code></pre><h2 id="&#x67E5;&#x8BE2;&#x6587;&#x7AE0;"><a name="&#x67E5;&#x8BE2;&#x6587;&#x7AE0;" class="plugin-anchor" href="#&#x67E5;&#x8BE2;&#x6587;&#x7AE0;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;&#x8BE2;&#x6587;&#x7AE0;</h2>
+</code></pre><h2 id="&#x67E5;&#x8BE2;&#x94B1;&#x5305;&#x8BE6;&#x60C5;"><a name="&#x67E5;&#x8BE2;&#x94B1;&#x5305;&#x8BE6;&#x60C5;" class="plugin-anchor" href="#&#x67E5;&#x8BE2;&#x94B1;&#x5305;&#x8BE6;&#x60C5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;&#x8BE2;&#x94B1;&#x5305;&#x8BE6;&#x60C5;</h2>
 <h3 id="method"><a name="method" class="plugin-anchor" href="#method"><i class="fa fa-link" aria-hidden="true"></i></a>Method</h3>
 <p>GET</p>
 <h3 id="url"><a name="url" class="plugin-anchor" href="#url"><i class="fa fa-link" aria-hidden="true"></i></a>URL</h3>
-<p><a href="http://jnr.host:9022/api/cyber/articles/:articleId" target="_blank">http://jnr.host:9022/api/cyber/articles/:articleId</a></p>
+<p><a href="http://jnr.host:9022/api/meta/accounts/:id" target="_blank">http://jnr.host:9022/api/meta/accounts/:id</a></p>
 <h3 id="header"><a name="header" class="plugin-anchor" href="#header"><i class="fa fa-link" aria-hidden="true"></i></a>Header</h3>
 <table>
 <thead>
@@ -926,7 +875,7 @@
 <tr>
 <td>200</td>
 <td>OK</td>
-<td>&#x64CD;&#x4F5C;&#x6210;&#x529F;</td>
+<td>Query success</td>
 </tr>
 <tr>
 <td>401</td>
@@ -937,11 +886,6 @@
 <td>403</td>
 <td>Forbidden</td>
 <td>&#x65E0;&#x6B64;&#x6743;&#x9650;</td>
-</tr>
-<tr>
-<td>404</td>
-<td>Not Found</td>
-<td>&#x65E0;&#x6B64;&#x7B56;&#x7565;</td>
 </tr>
 </tbody>
 </table>
@@ -949,160 +893,23 @@
 <pre><code>{
     &quot;errCode&quot;: 200,
     &quot;errMsg&quot;: &quot;Success&quot;,
-    &quot;data&quot;:    {
-        &quot;id&quot;: &quot;043c46422aa111ec881d38c9860954df&quot;,
-                &quot;type&quot;: &quot;markdown&quot;,
-                &quot;title&quot;: &quot;React + antd pro + umi &#x756A;&#x5916;&#x7BC7;&quot;,
-                &quot;description&quot;: &quot;&#x672C;&#x7BC7;&#x6587;&#x7AE0;&#x4E3B;&#x8981;&#x4ECB;&#x7ECD;&#x4ECE; 0 &#x4F7F;&#x7528;umi&#x642D;&#x5EFA;React&#x9879;&#x76EE;&#x7684;&#x8FC7;&#x7A0B;&#xFF0C;&#x8BB0;&#x5F55;&#x4E86;&#x76F8;&#x5173;umi&#x7684;&#x4F7F;&#x7528;&#x4EE5;&#x53CA;react&#x7684;&#x76F8;&#x5173;&#x77E5;&#x8BC6;&#x70B9;&#x3002;&quot;,
-                &quot;imgUrl&quot;: &quot;/static/api/tmpfiles/f/f947e59a95675bdb8e8317a06d33addf.jpeg&quot;,
-                &quot;ctime&quot;: &quot;05/14/2022&quot;,
-                &quot;mtime&quot;: &quot;05/18/2022&quot;,
-                &quot;status&quot;: 1,
-                &quot;readNum&quot;: 51,
-                &quot;likeNum&quot;: 0,
-                &quot;commNum&quot;: 0,
-                &quot;userId&quot;: &quot;800be36b639211ebb61b821700fd42c0&quot;,
-                &quot;key&quot;: &quot;85ec8c28d31c11eca01a38c9860954df&quot;,
-                &quot;author&quot;: {
-                        &quot;userId&quot;: &quot;800be36b639211ebb61b821700fd42c0&quot;,
-                        &quot;firstName&quot;: &quot;Thomas&quot;,
-                        &quot;lastName&quot;: &quot;Zhang&quot;,
-                        &quot;email&quot;: &quot;&quot;,
-                        &quot;telephone&quot;: &quot;&quot;,
-                        &quot;workphone&quot;: &quot;&quot;,
-                        &quot;avatar&quot;: &quot;http://image.cyber-life.cn/cyber2022/01/12/831e1fc873a611ecaf6f5254006e0804&quot;,
-                        &quot;jobTitle&quot;: &quot;Professor of Mathematical Analysis&quot;,
-                        &quot;biography&quot;: &quot;Professor of Mathematical Analysis&quot;
-                }
-    }    
+    &quot;data&quot;: {
+        &quot;id&quot;: &quot;9cb184d6e2c111ecbb5a38c9860954df&quot;,
+        &quot;status&quot;: 1,
+        &quot;balance&quot;: &quot;20.00000000&quot;,
+        &quot;sys&quot;: &quot;OTC&quot;,
+        &quot;coinId&quot;: &quot;USDT&quot;,
+        &quot;userId&quot;: &quot;6395355c64ab11ebab61821700fd42c0&quot;,
+        &quot;frozenBalance&quot;: &quot;0.00E-6&quot;,
+        &quot;ctime&quot;: &quot;2022-06-03 06:16:12&quot;,
+        &quot;mtime&quot;: &quot;2022-06-04 14:14:04&quot;
+    }
 }
-</code></pre><h2 id="&#x53D1;&#x5E03;&#x6587;&#x7AE0;"><a name="&#x53D1;&#x5E03;&#x6587;&#x7AE0;" class="plugin-anchor" href="#&#x53D1;&#x5E03;&#x6587;&#x7AE0;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53D1;&#x5E03;&#x6587;&#x7AE0;</h2>
+</code></pre><h2 id="&#x67E5;&#x8BE2;&#x94B1;&#x5305;&#x53D8;&#x66F4;&#x8BB0;&#x5F55;"><a name="&#x67E5;&#x8BE2;&#x94B1;&#x5305;&#x53D8;&#x66F4;&#x8BB0;&#x5F55;" class="plugin-anchor" href="#&#x67E5;&#x8BE2;&#x94B1;&#x5305;&#x53D8;&#x66F4;&#x8BB0;&#x5F55;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;&#x8BE2;&#x94B1;&#x5305;&#x53D8;&#x66F4;&#x8BB0;&#x5F55;</h2>
 <h3 id="method"><a name="method" class="plugin-anchor" href="#method"><i class="fa fa-link" aria-hidden="true"></i></a>Method</h3>
 <p>POST</p>
 <h3 id="url"><a name="url" class="plugin-anchor" href="#url"><i class="fa fa-link" aria-hidden="true"></i></a>URL</h3>
-<p><a href="http://jnr.host:9022/api/cyber/articles/:articleId/publish" target="_blank">http://jnr.host:9022/api/cyber/articles/:articleId/publish</a></p>
-<h3 id="header"><a name="header" class="plugin-anchor" href="#header"><i class="fa fa-link" aria-hidden="true"></i></a>Header</h3>
-<table>
-<thead>
-<tr>
-<th>Key</th>
-<th>Type</th>
-<th>Description</th>
-<th>Required</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Authorization</td>
-<td>String</td>
-<td>Bearer accessToken</td>
-<td>Yes</td>
-</tr>
-</tbody>
-</table>
-<h3 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h3>
-<table>
-<thead>
-<tr>
-<th>Code</th>
-<th>Message</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>200</td>
-<td>OK</td>
-<td>&#x64CD;&#x4F5C;&#x6210;&#x529F;</td>
-</tr>
-<tr>
-<td>401</td>
-<td>Unauthorized</td>
-<td>Not login</td>
-</tr>
-<tr>
-<td>403</td>
-<td>Forbidden</td>
-<td>&#x65E0;&#x6B64;&#x6743;&#x9650;</td>
-</tr>
-<tr>
-<td>404</td>
-<td>Not Found</td>
-<td>&#x65E0;&#x6B64;&#x89D2;&#x8272;</td>
-</tr>
-</tbody>
-</table>
-<h3 id="responses-example"><a name="responses-example" class="plugin-anchor" href="#responses-example"><i class="fa fa-link" aria-hidden="true"></i></a>Responses Example</h3>
-<pre><code>{
-    &quot;errCode&quot;: 200,
-    &quot;errMsg&quot;: &quot;Success&quot;
-}
-</code></pre><h2 id="&#x53EC;&#x56DE;&#x6587;&#x7AE0;"><a name="&#x53EC;&#x56DE;&#x6587;&#x7AE0;" class="plugin-anchor" href="#&#x53EC;&#x56DE;&#x6587;&#x7AE0;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53EC;&#x56DE;&#x6587;&#x7AE0;</h2>
-<h3 id="method"><a name="method" class="plugin-anchor" href="#method"><i class="fa fa-link" aria-hidden="true"></i></a>Method</h3>
-<p>POST</p>
-<h3 id="url"><a name="url" class="plugin-anchor" href="#url"><i class="fa fa-link" aria-hidden="true"></i></a>URL</h3>
-<p><a href="http://jnr.host:9022/api/cyber/articles/:articleId/revoke" target="_blank">http://jnr.host:9022/api/cyber/articles/:articleId/revoke</a></p>
-<h3 id="header"><a name="header" class="plugin-anchor" href="#header"><i class="fa fa-link" aria-hidden="true"></i></a>Header</h3>
-<table>
-<thead>
-<tr>
-<th>Key</th>
-<th>Type</th>
-<th>Description</th>
-<th>Required</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Authorization</td>
-<td>String</td>
-<td>Bearer accessToken</td>
-<td>Yes</td>
-</tr>
-</tbody>
-</table>
-<h3 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h3>
-<table>
-<thead>
-<tr>
-<th>Code</th>
-<th>Message</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>200</td>
-<td>OK</td>
-<td>&#x64CD;&#x4F5C;&#x6210;&#x529F;</td>
-</tr>
-<tr>
-<td>401</td>
-<td>Unauthorized</td>
-<td>Not login</td>
-</tr>
-<tr>
-<td>403</td>
-<td>Forbidden</td>
-<td>&#x65E0;&#x6B64;&#x6743;&#x9650;</td>
-</tr>
-<tr>
-<td>404</td>
-<td>Not Found</td>
-<td>&#x65E0;&#x6B64;&#x89D2;&#x8272;</td>
-</tr>
-</tbody>
-</table>
-<h3 id="responses-example"><a name="responses-example" class="plugin-anchor" href="#responses-example"><i class="fa fa-link" aria-hidden="true"></i></a>Responses Example</h3>
-<pre><code>{
-    &quot;errCode&quot;: 200,
-    &quot;errMsg&quot;: &quot;Success&quot;
-}
-</code></pre><h2 id="&#x67E5;&#x8BE2;&#x6587;&#x7AE0;&#x7684;&#x5206;&#x7C7B;&#x5217;&#x8868;"><a name="&#x67E5;&#x8BE2;&#x6587;&#x7AE0;&#x7684;&#x5206;&#x7C7B;&#x5217;&#x8868;" class="plugin-anchor" href="#&#x67E5;&#x8BE2;&#x6587;&#x7AE0;&#x7684;&#x5206;&#x7C7B;&#x5217;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;&#x8BE2;&#x6587;&#x7AE0;&#x7684;&#x5206;&#x7C7B;&#x5217;&#x8868;</h2>
-<h3 id="method"><a name="method" class="plugin-anchor" href="#method"><i class="fa fa-link" aria-hidden="true"></i></a>Method</h3>
-<p>POST</p>
-<h3 id="url"><a name="url" class="plugin-anchor" href="#url"><i class="fa fa-link" aria-hidden="true"></i></a>URL</h3>
-<p><a href="http://jnr.host:9022/api/cyber/articles/:articleId/categories/filter" target="_blank">http://jnr.host:9022/api/cyber/articles/:articleId/categories/filter</a></p>
+<p><a href="http://jnr.host:9022/api/meta/accounts/access/filter" target="_blank">http://jnr.host:9022/api/meta/accounts/access/filter</a></p>
 <h3 id="header"><a name="header" class="plugin-anchor" href="#header"><i class="fa fa-link" aria-hidden="true"></i></a>Header</h3>
 <table>
 <thead>
@@ -1163,8 +970,12 @@
 <pre><code>{
     &quot;currPage&quot;: 1,
     &quot;pageSize&quot;: 20,
-    &quot;orders&quot;: [{ &quot;column&quot;: &quot;ctime&quot;, &quot;dir&quot;: &quot;desc&quot; }],
-    &quot;searchs&quot;: [{ &quot;column&quot;: &quot;type&quot;, &quot;op&quot;: &quot;eq&quot;, &quot;value&quot;: &quot;notebook&quot; }]
+    &quot;orders&quot;: [{
+        &quot;column&quot;: &quot;ctime&quot;,
+        &quot;dir&quot;: &quot;desc&quot;
+    }],
+    &quot;searchs&quot;: [
+    ],
 }
 </code></pre><h3 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h3>
 <table>
@@ -1198,23 +1009,30 @@
     &quot;errCode&quot;: 200,
     &quot;errMsg&quot;: &quot;Success&quot;,
     &quot;currPage&quot;: 1,
-    &quot;pageSize&quot;: 12,
-    &quot;totalNum&quot;: 24,
-    &quot;totalPage&quot;: 2,
+    &quot;pageSize&quot;: 20,
+    &quot;totalNum&quot;: 3,
+    &quot;totalPage&quot;: 1,
     &quot;datas&quot;: [
-                {
-                        &quot;id&quot;: &quot;1917f866ce5911ec85a638c9860954df&quot;,
-                        &quot;name&quot;: &quot;ui&quot;,
-                        &quot;num&quot;: 36
-                },
-                ......
+        {
+            &quot;id&quot;: 1,
+            &quot;accountId&quot;: &quot;9cb184d6e2c111ecbb5a38c9860954df&quot;,
+            &quot;coinId&quot;: &quot;ETH&quot;,
+            &quot;amount&quot;: &quot;10.00000000&quot;,
+            &quot;openingBalance&quot;: &quot;60.00000000&quot;,
+            &quot;endingBalance&quot;: &quot;50.00000000&quot;,
+            &quot;openingFrozenBalance&quot;: &quot;10.00000000&quot;,
+            &quot;endingFrozenBalance&quot;: &quot;20.00000000&quot;,
+            &quot;ctime&quot;: &quot;2022-06-03 20:02:39&quot;,
+            &quot;action&quot;: &quot;freeze_balance&quot;
+        },
+    ......
     ]
 }
-</code></pre><h2 id="&#x67E5;&#x8BE2;&#x6587;&#x7AE0;&#x7684;&#x6807;&#x7B7E;&#x5217;&#x8868;"><a name="&#x67E5;&#x8BE2;&#x6587;&#x7AE0;&#x7684;&#x6807;&#x7B7E;&#x5217;&#x8868;" class="plugin-anchor" href="#&#x67E5;&#x8BE2;&#x6587;&#x7AE0;&#x7684;&#x6807;&#x7B7E;&#x5217;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;&#x8BE2;&#x6587;&#x7AE0;&#x7684;&#x6807;&#x7B7E;&#x5217;&#x8868;</h2>
+</code></pre><h2 id="&#x67E5;&#x8BE2;&#x8BA2;&#x5355;&#x5217;&#x8868;"><a name="&#x67E5;&#x8BE2;&#x8BA2;&#x5355;&#x5217;&#x8868;" class="plugin-anchor" href="#&#x67E5;&#x8BE2;&#x8BA2;&#x5355;&#x5217;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;&#x8BE2;&#x8BA2;&#x5355;&#x5217;&#x8868;</h2>
 <h3 id="method"><a name="method" class="plugin-anchor" href="#method"><i class="fa fa-link" aria-hidden="true"></i></a>Method</h3>
 <p>POST</p>
 <h3 id="url"><a name="url" class="plugin-anchor" href="#url"><i class="fa fa-link" aria-hidden="true"></i></a>URL</h3>
-<p><a href="http://jnr.host:9022/api/cyber/articles/:articleId/tags/filter" target="_blank">http://jnr.host:9022/api/cyber/articles/:articleId/tags/filter</a></p>
+<p><a href="http://jnr.host:9022/api/meta/orders/filter" target="_blank">http://jnr.host:9022/api/meta/orders/filter</a></p>
 <h3 id="header"><a name="header" class="plugin-anchor" href="#header"><i class="fa fa-link" aria-hidden="true"></i></a>Header</h3>
 <table>
 <thead>
@@ -1275,8 +1093,12 @@
 <pre><code>{
     &quot;currPage&quot;: 1,
     &quot;pageSize&quot;: 20,
-    &quot;orders&quot;: [{ &quot;column&quot;: &quot;ctime&quot;, &quot;dir&quot;: &quot;desc&quot; }],
-    &quot;searchs&quot;: [{ &quot;column&quot;: &quot;type&quot;, &quot;op&quot;: &quot;eq&quot;, &quot;value&quot;: &quot;notebook&quot; }]
+    &quot;orders&quot;: [{
+        &quot;column&quot;: &quot;ctime&quot;,
+        &quot;dir&quot;: &quot;desc&quot;
+    }],
+    &quot;searchs&quot;: [
+    ],
 }
 </code></pre><h3 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h3>
 <table>
@@ -1310,23 +1132,38 @@
     &quot;errCode&quot;: 200,
     &quot;errMsg&quot;: &quot;Success&quot;,
     &quot;currPage&quot;: 1,
-    &quot;pageSize&quot;: 12,
-    &quot;totalNum&quot;: 24,
-    &quot;totalPage&quot;: 2,
+    &quot;pageSize&quot;: 20,
+    &quot;totalNum&quot;: 8,
+    &quot;totalPage&quot;: 1,
     &quot;datas&quot;: [
-                {
-                        &quot;id&quot;: &quot;1917f866ce5911ec85a638c9860954df&quot;,
-                        &quot;name&quot;: &quot;ui&quot;,
-                        &quot;num&quot;: 36
-                },
-                ......
+        {
+            &quot;id&quot;: &quot;31472ddee3f911ecb6ba38c9860954df&quot;,
+            &quot;fromSys&quot;: &quot;OTC&quot;,
+            &quot;fromCoinId&quot;: &quot;USDT&quot;,
+            &quot;fromUserId&quot;: &quot;800be36b639211ebb61b821700fd42c0&quot;,
+            &quot;fromAccountId&quot;: &quot;9902eac6e3c211ec80d238c9860954df&quot;,
+            &quot;toSys&quot;: &quot;OTC&quot;,
+            &quot;toCoinId&quot;: &quot;USDT&quot;,
+            &quot;toUserId&quot;: &quot;800be36b639211ebb61b821700fd42c0&quot;,
+            &quot;toAccountId&quot;: &quot;9902eac6e3c211ec80d238c9860954df&quot;,
+            &quot;amount&quot;: &quot;1.00000000&quot;,
+            &quot;ctime&quot;: &quot;2022-06-04 19:26:35&quot;,
+            &quot;mtime&quot;: &quot;2022-06-04 19:26:35&quot;,
+            &quot;status&quot;: 200,
+            &quot;msg&quot;: &quot;Success&quot;,
+            &quot;transactionId&quot;: &quot;3149d7bee3f911ecb6ba38c9860954df&quot;,
+            &quot;businessId&quot;: &quot;48810ddce25811ecaee738c9860954df&quot;,
+            &quot;businessType&quot;: &quot;art&quot;,
+            &quot;operId&quot;: &quot;800be36b639211ebb61b821700fd42c0&quot;
+        },
+    ......
     ]
 }
-</code></pre><h2 id="&#x6587;&#x7AE0;&#x7ED1;&#x5B9A;&#x5206;&#x7C7B;"><a name="&#x6587;&#x7AE0;&#x7ED1;&#x5B9A;&#x5206;&#x7C7B;" class="plugin-anchor" href="#&#x6587;&#x7AE0;&#x7ED1;&#x5B9A;&#x5206;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6587;&#x7AE0;&#x7ED1;&#x5B9A;&#x5206;&#x7C7B;</h2>
+</code></pre><h2 id="&#x67E5;&#x8BE2;&#x4EA4;&#x6613;&#x5217;&#x8868;"><a name="&#x67E5;&#x8BE2;&#x4EA4;&#x6613;&#x5217;&#x8868;" class="plugin-anchor" href="#&#x67E5;&#x8BE2;&#x4EA4;&#x6613;&#x5217;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;&#x8BE2;&#x4EA4;&#x6613;&#x5217;&#x8868;</h2>
 <h3 id="method"><a name="method" class="plugin-anchor" href="#method"><i class="fa fa-link" aria-hidden="true"></i></a>Method</h3>
 <p>POST</p>
 <h3 id="url"><a name="url" class="plugin-anchor" href="#url"><i class="fa fa-link" aria-hidden="true"></i></a>URL</h3>
-<p><a href="http://jnr.host:9022/api/cyber/categories/:categoryId/articles/:articleId" target="_blank">http://jnr.host:9022/api/cyber/categories/:categoryId/articles/:articleId</a></p>
+<p><a href="http://jnr.host:9022/api/meta/orders/transactions/filter" target="_blank">http://jnr.host:9022/api/meta/orders/transactions/filter</a></p>
 <h3 id="header"><a name="header" class="plugin-anchor" href="#header"><i class="fa fa-link" aria-hidden="true"></i></a>Header</h3>
 <table>
 <thead>
@@ -1346,7 +1183,55 @@
 </tr>
 </tbody>
 </table>
-<h3 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h3>
+<h3 id="body"><a name="body" class="plugin-anchor" href="#body"><i class="fa fa-link" aria-hidden="true"></i></a>Body</h3>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>currPage</td>
+<td>int</td>
+<td>&#x5F53;&#x524D;&#x9875;&#x7801;&#x6570;&#xFF0C;&#x9ED8;&#x8BA4;=1</td>
+<td>No</td>
+</tr>
+<tr>
+<td>pageSize</td>
+<td>int</td>
+<td>&#x6BCF;&#x9875;&#x6570;&#x636E;&#x5927;&#x5C0F;&#xFF0C;&#x9ED8;&#x8BA4;=20</td>
+<td>No</td>
+</tr>
+<tr>
+<td>orders</td>
+<td>Object</td>
+<td>&#x6392;&#x5E8F;&#x89C4;&#x5219;&#xFF0C;&#x9ED8;&#x8BA4;=[]&#x3002;</td>
+<td>No</td>
+</tr>
+<tr>
+<td>searchs</td>
+<td>Object</td>
+<td>&#x67E5;&#x8BE2;&#x6761;&#x4EF6;&#xFF0C;&#x9ED8;&#x8BA4;=[]&#x3002;</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<h3 id="request-example"><a name="request-example" class="plugin-anchor" href="#request-example"><i class="fa fa-link" aria-hidden="true"></i></a>Request Example</h3>
+<pre><code>{
+    &quot;currPage&quot;: 1,
+    &quot;pageSize&quot;: 20,
+    &quot;orders&quot;: [{
+        &quot;column&quot;: &quot;ctime&quot;,
+        &quot;dir&quot;: &quot;desc&quot;
+    }],
+    &quot;searchs&quot;: [
+    ],
+}
+</code></pre><h3 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h3>
 <table>
 <thead>
 <tr>
@@ -1377,68 +1262,37 @@
 <pre><code>{
     &quot;errCode&quot;: 200,
     &quot;errMsg&quot;: &quot;Success&quot;,
+    &quot;currPage&quot;: 1,
+    &quot;pageSize&quot;: 20,
+    &quot;totalNum&quot;: 57,
+    &quot;totalPage&quot;: 3,
+    &quot;datas&quot;: [
+        {
+            &quot;id&quot;: &quot;10c9b5d2e33511ecb32138c9860954df&quot;,
+            &quot;transactionType&quot;: &quot;transferOut&quot;,
+            &quot;orderId&quot;: &quot;10c9b546e33511ecb32138c9860954df&quot;,
+            &quot;fromSys&quot;: &quot;OTC&quot;,
+            &quot;fromCoinId&quot;: &quot;ETH&quot;,
+            &quot;fromUserId&quot;: &quot;800be36b639211ebb61b821700fd42c0&quot;,
+            &quot;fromAccountId&quot;: &quot;9cb184d6e2c111ecbb5a38c9860954df&quot;,
+            &quot;toSys&quot;: &quot;OTC&quot;,
+            &quot;toCoinId&quot;: &quot;BTC&quot;,
+            &quot;toUserId&quot;: &quot;800be36b639211ebb61b821700fd42c0&quot;,
+            &quot;toAccountId&quot;: &quot;9cb3861ee2c111ecbb5a38c9860954df&quot;,
+            &quot;amount&quot;: &quot;10.00000000&quot;,
+            &quot;ctime&quot;: &quot;2022-06-03 20:02:39&quot;,
+            &quot;status&quot;: 200,
+            &quot;msg&quot;: &quot;Success&quot;,
+            &quot;businessId&quot;: &quot;10c9b2eee33511ecb32138c9860954df&quot;,
+            &quot;operId&quot;: &quot;800be36b639211ebb61b821700fd42c0&quot;
+        },
+    ]
 }
-</code></pre><h2 id="&#x6587;&#x7AE0;&#x89E3;&#x7ED1;&#x5206;&#x7C7B;"><a name="&#x6587;&#x7AE0;&#x89E3;&#x7ED1;&#x5206;&#x7C7B;" class="plugin-anchor" href="#&#x6587;&#x7AE0;&#x89E3;&#x7ED1;&#x5206;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6587;&#x7AE0;&#x89E3;&#x7ED1;&#x5206;&#x7C7B;</h2>
-<h3 id="method"><a name="method" class="plugin-anchor" href="#method"><i class="fa fa-link" aria-hidden="true"></i></a>Method</h3>
-<p>DELETE</p>
-<h3 id="url"><a name="url" class="plugin-anchor" href="#url"><i class="fa fa-link" aria-hidden="true"></i></a>URL</h3>
-<p><a href="http://jnr.host:9022/api/cyber/categories/:categoryId/articles/:articleId" target="_blank">http://jnr.host:9022/api/cyber/categories/:categoryId/articles/:articleId</a></p>
-<h3 id="header"><a name="header" class="plugin-anchor" href="#header"><i class="fa fa-link" aria-hidden="true"></i></a>Header</h3>
-<table>
-<thead>
-<tr>
-<th>Key</th>
-<th>Type</th>
-<th>Description</th>
-<th>Required</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Authorization</td>
-<td>String</td>
-<td>Bearer accessToken</td>
-<td>Yes</td>
-</tr>
-</tbody>
-</table>
-<h3 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h3>
-<table>
-<thead>
-<tr>
-<th>Code</th>
-<th>Message</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>200</td>
-<td>OK</td>
-<td>Query success</td>
-</tr>
-<tr>
-<td>401</td>
-<td>Unauthorized</td>
-<td>Not login</td>
-</tr>
-<tr>
-<td>403</td>
-<td>Forbidden</td>
-<td>&#x65E0;&#x6B64;&#x6743;&#x9650;</td>
-</tr>
-</tbody>
-</table>
-<h3 id="responses-example"><a name="responses-example" class="plugin-anchor" href="#responses-example"><i class="fa fa-link" aria-hidden="true"></i></a>Responses Example</h3>
-<pre><code>{
-    &quot;errCode&quot;: 200,
-    &quot;errMsg&quot;: &quot;Success&quot;,
-}
-</code></pre><h2 id="&#x6587;&#x7AE0;&#x7ED1;&#x5B9A;&#x6807;&#x7B7E;"><a name="&#x6587;&#x7AE0;&#x7ED1;&#x5B9A;&#x6807;&#x7B7E;" class="plugin-anchor" href="#&#x6587;&#x7AE0;&#x7ED1;&#x5B9A;&#x6807;&#x7B7E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6587;&#x7AE0;&#x7ED1;&#x5B9A;&#x6807;&#x7B7E;</h2>
+</code></pre><h2 id="&#x4EA4;&#x6613;"><a name="&#x4EA4;&#x6613;" class="plugin-anchor" href="#&#x4EA4;&#x6613;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4EA4;&#x6613;</h2>
 <h3 id="method"><a name="method" class="plugin-anchor" href="#method"><i class="fa fa-link" aria-hidden="true"></i></a>Method</h3>
 <p>POST</p>
 <h3 id="url"><a name="url" class="plugin-anchor" href="#url"><i class="fa fa-link" aria-hidden="true"></i></a>URL</h3>
-<p><a href="http://jnr.host:9022/api/cyber/tags/:tagId/articles/:articleId" target="_blank">http://jnr.host:9022/api/cyber/tags/:tagId/articles/:articleId</a></p>
+<p><a href="http://jnr.host:9022/api/meta/orders/transfer" target="_blank">http://jnr.host:9022/api/meta/orders/transfer</a></p>
 <h3 id="header"><a name="header" class="plugin-anchor" href="#header"><i class="fa fa-link" aria-hidden="true"></i></a>Header</h3>
 <table>
 <thead>
@@ -1458,43 +1312,255 @@
 </tr>
 </tbody>
 </table>
-<h3 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h3>
+<h3 id="body"><a name="body" class="plugin-anchor" href="#body"><i class="fa fa-link" aria-hidden="true"></i></a>Body</h3>
 <table>
 <thead>
 <tr>
-<th>Code</th>
-<th>Message</th>
+<th>Key</th>
+<th>Type</th>
 <th>Description</th>
+<th>Required</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>200</td>
-<td>OK</td>
-<td>Query success</td>
+<td>toAccountId</td>
+<td>String</td>
+<td>&#x8F6C;&#x8D26;&#x5165;&#x5E10;&#x53F7;</td>
+<td>Yes</td>
 </tr>
 <tr>
-<td>401</td>
-<td>Unauthorized</td>
-<td>Not login</td>
+<td>amount</td>
+<td>float</td>
+<td>&#x91D1;&#x989D;</td>
+<td>Yes</td>
 </tr>
 <tr>
-<td>403</td>
-<td>Forbidden</td>
-<td>&#x65E0;&#x6B64;&#x6743;&#x9650;</td>
+<td>businessId</td>
+<td>String</td>
+<td>&#x5546;&#x54C1;ID</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>businessType</td>
+<td>String</td>
+<td>&#x5546;&#x54C1;&#x7C7B;&#x578B;</td>
+<td>Yes</td>
 </tr>
 </tbody>
 </table>
-<h3 id="responses-example"><a name="responses-example" class="plugin-anchor" href="#responses-example"><i class="fa fa-link" aria-hidden="true"></i></a>Responses Example</h3>
+<h3 id="request-example"><a name="request-example" class="plugin-anchor" href="#request-example"><i class="fa fa-link" aria-hidden="true"></i></a>Request Example</h3>
 <pre><code>{
-    &quot;errCode&quot;: 200,
-    &quot;errMsg&quot;: &quot;Success&quot;,
+    &quot;toAccountId&quot;: &quot;9cb184d6e2c111ecbb5a38c9860954df&quot;,
+    &quot;amount&quot;: 20,
+    &quot;businessId&quot;: &quot;673a6938e3cc11ecb5d438c9860954df&quot;,
+  &quot;businessType&quot;: &quot;castle&quot;
 }
-</code></pre><h2 id="&#x6587;&#x7AE0;&#x89E3;&#x7ED1;&#x6807;&#x7B7E;"><a name="&#x6587;&#x7AE0;&#x89E3;&#x7ED1;&#x6807;&#x7B7E;" class="plugin-anchor" href="#&#x6587;&#x7AE0;&#x89E3;&#x7ED1;&#x6807;&#x7B7E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6587;&#x7AE0;&#x89E3;&#x7ED1;&#x6807;&#x7B7E;</h2>
+</code></pre><h3 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h3>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Message</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td>OK</td>
+<td>Query success</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized</td>
+<td>Not login</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden</td>
+<td>&#x65E0;&#x6B64;&#x6743;&#x9650;</td>
+</tr>
+<tr>
+<td>10404</td>
+<td>fromAccount Not Found</td>
+<td>&#x8F6C;&#x51FA;&#x5E10;&#x53F7;&#x4E0D;&#x5B58;&#x5728;</td>
+</tr>
+<tr>
+<td>10412</td>
+<td>fromAccount Is Lock</td>
+<td>&#x8F6C;&#x51FA;&#x5E10;&#x53F7;&#x5DF2;&#x7ECF;&#x9501;&#x5B9A;</td>
+</tr>
+<tr>
+<td>10416</td>
+<td>fromAccount Insufficient Balance</td>
+<td>&#x8F6C;&#x51FA;&#x5E10;&#x53F7;&#x4F59;&#x989D;&#x4E0D;&#x8DB3;</td>
+</tr>
+<tr>
+<td>20404</td>
+<td>toAccount Not Found</td>
+<td>&#x8F6C;&#x5165;&#x5E10;&#x53F7;&#x4E0D;&#x5B58;&#x5728;</td>
+</tr>
+<tr>
+<td>20412</td>
+<td>toAccount Is Lock</td>
+<td>&#x8F6C;&#x5165;&#x5E10;&#x53F7;&#x5DF2;&#x7ECF;&#x9501;&#x5B9A;</td>
+</tr>
+<tr>
+<td>30404</td>
+<td>fromAccount Not Found</td>
+<td>&#x63D0;&#x4EA4;&#x8F6C;&#x51FA;&#x5E10;&#x53F7;&#x4E0D;&#x5B58;&#x5728;</td>
+</tr>
+<tr>
+<td>30412</td>
+<td>fromAccount Is Lock</td>
+<td>&#x63D0;&#x4EA4;&#x8F6C;&#x51FA;&#x5E10;&#x53F7;&#x5DF2;&#x7ECF;&#x9501;&#x5B9A;</td>
+</tr>
+<tr>
+<td>40404</td>
+<td>fromAccount Not Found</td>
+<td>&#x56DE;&#x6EDA;&#x8F6C;&#x51FA;&#x5E10;&#x53F7;&#x4E0D;&#x5B58;&#x5728;</td>
+</tr>
+<tr>
+<td>40412</td>
+<td>fromAccount Is Lock</td>
+<td>&#x56DE;&#x6EDA;&#x8F6C;&#x51FA;&#x5E10;&#x53F7;&#x5DF2;&#x7ECF;&#x9501;&#x5B9A;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="responses-example"><a name="responses-example" class="plugin-anchor" href="#responses-example"><i class="fa fa-link" aria-hidden="true"></i></a>Responses Example</h3>
+<pre><code>{
+    &quot;errCode&quot;: 200,
+    &quot;errMsg&quot;: &quot;Success&quot;,
+    &quot;id&quot;: &quot;88fb3ddae3cd11ecb45a38c9860954df&quot;
+}
+</code></pre><h2 id="&#x67E5;&#x8BE2;&#x57CE;&#x5821;&#x5217;&#x8868;"><a name="&#x67E5;&#x8BE2;&#x57CE;&#x5821;&#x5217;&#x8868;" class="plugin-anchor" href="#&#x67E5;&#x8BE2;&#x57CE;&#x5821;&#x5217;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;&#x8BE2;&#x57CE;&#x5821;&#x5217;&#x8868;</h2>
 <h3 id="method"><a name="method" class="plugin-anchor" href="#method"><i class="fa fa-link" aria-hidden="true"></i></a>Method</h3>
-<p>DELETE</p>
+<p>POST</p>
 <h3 id="url"><a name="url" class="plugin-anchor" href="#url"><i class="fa fa-link" aria-hidden="true"></i></a>URL</h3>
-<p><a href="http://jnr.host:9022/api/cyber/tags/:tagId/articles/:articleId" target="_blank">http://jnr.host:9022/api/cyber/tags/:tagId/articles/:articleId</a></p>
+<p><a href="http://jnr.host:9022/api/meta/castles/filter" target="_blank">http://jnr.host:9022/api/meta/castles/filter</a></p>
+<h3 id="header"><a name="header" class="plugin-anchor" href="#header"><i class="fa fa-link" aria-hidden="true"></i></a>Header</h3>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization</td>
+<td>String</td>
+<td>Bearer accessToken</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="body"><a name="body" class="plugin-anchor" href="#body"><i class="fa fa-link" aria-hidden="true"></i></a>Body</h3>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>currPage</td>
+<td>int</td>
+<td>&#x5F53;&#x524D;&#x9875;&#x7801;&#x6570;&#xFF0C;&#x9ED8;&#x8BA4;=1</td>
+<td>No</td>
+</tr>
+<tr>
+<td>pageSize</td>
+<td>int</td>
+<td>&#x6BCF;&#x9875;&#x6570;&#x636E;&#x5927;&#x5C0F;&#xFF0C;&#x9ED8;&#x8BA4;=20</td>
+<td>No</td>
+</tr>
+<tr>
+<td>orders</td>
+<td>Object</td>
+<td>&#x6392;&#x5E8F;&#x89C4;&#x5219;&#xFF0C;&#x9ED8;&#x8BA4;=[]&#x3002;</td>
+<td>No</td>
+</tr>
+<tr>
+<td>searchs</td>
+<td>Object</td>
+<td>&#x67E5;&#x8BE2;&#x6761;&#x4EF6;&#xFF0C;&#x9ED8;&#x8BA4;=[]&#x3002;</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<h3 id="request-example"><a name="request-example" class="plugin-anchor" href="#request-example"><i class="fa fa-link" aria-hidden="true"></i></a>Request Example</h3>
+<pre><code>{
+    &quot;currPage&quot;: 1,
+    &quot;pageSize&quot;: 20,
+    &quot;orders&quot;: [{
+        &quot;column&quot;: &quot;ctime&quot;,
+        &quot;dir&quot;: &quot;desc&quot;
+    }],
+    &quot;searchs&quot;: [
+    ],
+}
+</code></pre><h3 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h3>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Message</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td>OK</td>
+<td>Query success</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized</td>
+<td>Not login</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden</td>
+<td>&#x65E0;&#x6B64;&#x6743;&#x9650;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="responses-example"><a name="responses-example" class="plugin-anchor" href="#responses-example"><i class="fa fa-link" aria-hidden="true"></i></a>Responses Example</h3>
+<pre><code>{
+    &quot;errCode&quot;: 200,
+    &quot;errMsg&quot;: &quot;Success&quot;,
+    &quot;currPage&quot;: 1,
+    &quot;pageSize&quot;: 20,
+    &quot;totalNum&quot;: 1,
+    &quot;totalPage&quot;: 1,
+    &quot;datas&quot;: [
+        {
+            &quot;id&quot;: &quot;48810ddce25811ecaee738c9860954df&quot;,
+            &quot;lat&quot;: &quot;-38.42551122375836&quot;,
+            &quot;lng&quot;: &quot;83.29769733567451&quot;,
+            &quot;price&quot;: &quot;20.00000000&quot;,
+            &quot;status&quot;: 1,
+            &quot;ownerId&quot;: &quot;800be36b639211ebb61b821700fd42c0&quot;,
+            &quot;artUrl&quot;: &quot;https://tse1-mm.cn.bing.net/th/id/R-C.dbcd226729c91e21a4cba8a81c9fc951?rik=HsP20JbzdudfUA&amp;riu=http%3a%2f%2fimgx.xiawu&quot;,
+            &quot;artPrice&quot;: &quot;1.00000000&quot;,
+            &quot;ctime&quot;: &quot;2022-06-02 17:42:14&quot;,
+            &quot;mtime&quot;: &quot;2022-06-04 17:45:41&quot;
+        }
+    ]
+}
+</code></pre><h2 id="&#x8D2D;&#x4E70;&#x57CE;&#x5821;"><a name="&#x8D2D;&#x4E70;&#x57CE;&#x5821;" class="plugin-anchor" href="#&#x8D2D;&#x4E70;&#x57CE;&#x5821;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8D2D;&#x4E70;&#x57CE;&#x5821;</h2>
+<h3 id="method"><a name="method" class="plugin-anchor" href="#method"><i class="fa fa-link" aria-hidden="true"></i></a>Method</h3>
+<p>POST</p>
+<h3 id="url"><a name="url" class="plugin-anchor" href="#url"><i class="fa fa-link" aria-hidden="true"></i></a>URL</h3>
+<p><a href="http://jnr.host:9022/api/meta/castles/:id/buy" target="_blank">http://jnr.host:9022/api/meta/castles/:id/buy</a></p>
 <h3 id="header"><a name="header" class="plugin-anchor" href="#header"><i class="fa fa-link" aria-hidden="true"></i></a>Header</h3>
 <table>
 <thead>
@@ -1539,15 +1605,187 @@
 <td>Forbidden</td>
 <td>&#x65E0;&#x6B64;&#x6743;&#x9650;</td>
 </tr>
+<tr>
+<td>10404</td>
+<td>fromAccount Not Found</td>
+<td>&#x5E10;&#x53F7;&#x4E0D;&#x5B58;&#x5728;</td>
+</tr>
+<tr>
+<td>10412</td>
+<td>fromAccount Is Lock</td>
+<td>&#x5E10;&#x53F7;&#x5DF2;&#x7ECF;&#x9501;&#x5B9A;</td>
+</tr>
+<tr>
+<td>10416</td>
+<td>fromAccount Insufficient Balance</td>
+<td>&#x5E10;&#x53F7;&#x4F59;&#x989D;&#x4E0D;&#x8DB3;</td>
+</tr>
 </tbody>
 </table>
 <h3 id="responses-example"><a name="responses-example" class="plugin-anchor" href="#responses-example"><i class="fa fa-link" aria-hidden="true"></i></a>Responses Example</h3>
 <pre><code>{
     &quot;errCode&quot;: 200,
-    &quot;errMsg&quot;: &quot;Success&quot;,
+    &quot;errMsg&quot;: &quot;Success&quot;
+}
+</code></pre><h2 id="&#x4FEE;&#x6539;&#x827A;&#x672F;&#x54C1;"><a name="&#x4FEE;&#x6539;&#x827A;&#x672F;&#x54C1;" class="plugin-anchor" href="#&#x4FEE;&#x6539;&#x827A;&#x672F;&#x54C1;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4FEE;&#x6539;&#x827A;&#x672F;&#x54C1;</h2>
+<h3 id="method"><a name="method" class="plugin-anchor" href="#method"><i class="fa fa-link" aria-hidden="true"></i></a>Method</h3>
+<p>POST</p>
+<h3 id="url"><a name="url" class="plugin-anchor" href="#url"><i class="fa fa-link" aria-hidden="true"></i></a>URL</h3>
+<p><a href="http://jnr.host:9022/api/meta/castles/:id/art" target="_blank">http://jnr.host:9022/api/meta/castles/:id/art</a></p>
+<h3 id="header"><a name="header" class="plugin-anchor" href="#header"><i class="fa fa-link" aria-hidden="true"></i></a>Header</h3>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization</td>
+<td>String</td>
+<td>Bearer accessToken</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="body"><a name="body" class="plugin-anchor" href="#body"><i class="fa fa-link" aria-hidden="true"></i></a>Body</h3>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>artUrl</td>
+<td>int</td>
+<td>&#x827A;&#x672F;&#x54C1;URL</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>artPrice</td>
+<td>float</td>
+<td>&#x4EF7;&#x683C;</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="request-example"><a name="request-example" class="plugin-anchor" href="#request-example"><i class="fa fa-link" aria-hidden="true"></i></a>Request Example</h3>
+<pre><code>{
+    &quot;artUrl&quot;: &quot;https://tse1-mm.cn.bing.net/th/id/R-C.dbcd226729c91e21a4cba8a81c9fc951?rik=HsP20JbzdudfUA&amp;riu=http%3a%2f%2fimgx.xiawu&quot;,
+    &quot;artPrice&quot;: 1
+}
+</code></pre><h3 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h3>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Message</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td>OK</td>
+<td>Query success</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized</td>
+<td>Not login</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden</td>
+<td>&#x65E0;&#x6B64;&#x6743;&#x9650;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="responses-example"><a name="responses-example" class="plugin-anchor" href="#responses-example"><i class="fa fa-link" aria-hidden="true"></i></a>Responses Example</h3>
+<pre><code>{
+    &quot;errCode&quot;: 200,
+    &quot;errMsg&quot;: &quot;Success&quot;
+}
+</code></pre><h2 id="&#x8D2D;&#x4E70;&#x827A;&#x672F;&#x54C1;"><a name="&#x8D2D;&#x4E70;&#x827A;&#x672F;&#x54C1;" class="plugin-anchor" href="#&#x8D2D;&#x4E70;&#x827A;&#x672F;&#x54C1;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8D2D;&#x4E70;&#x827A;&#x672F;&#x54C1;</h2>
+<h3 id="method"><a name="method" class="plugin-anchor" href="#method"><i class="fa fa-link" aria-hidden="true"></i></a>Method</h3>
+<p>POST</p>
+<h3 id="url"><a name="url" class="plugin-anchor" href="#url"><i class="fa fa-link" aria-hidden="true"></i></a>URL</h3>
+<p><a href="http://jnr.host:9022/api/meta/castles/:id/art-buy" target="_blank">http://jnr.host:9022/api/meta/castles/:id/art-buy</a></p>
+<h3 id="header"><a name="header" class="plugin-anchor" href="#header"><i class="fa fa-link" aria-hidden="true"></i></a>Header</h3>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization</td>
+<td>String</td>
+<td>Bearer accessToken</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h3>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Message</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td>OK</td>
+<td>Query success</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized</td>
+<td>Not login</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden</td>
+<td>&#x65E0;&#x6B64;&#x6743;&#x9650;</td>
+</tr>
+<tr>
+<td>10404</td>
+<td>fromAccount Not Found</td>
+<td>&#x5E10;&#x53F7;&#x4E0D;&#x5B58;&#x5728;</td>
+</tr>
+<tr>
+<td>10412</td>
+<td>fromAccount Is Lock</td>
+<td>&#x5E10;&#x53F7;&#x5DF2;&#x7ECF;&#x9501;&#x5B9A;</td>
+</tr>
+<tr>
+<td>10416</td>
+<td>fromAccount Insufficient Balance</td>
+<td>&#x5E10;&#x53F7;&#x4F59;&#x989D;&#x4E0D;&#x8DB3;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="responses-example"><a name="responses-example" class="plugin-anchor" href="#responses-example"><i class="fa fa-link" aria-hidden="true"></i></a>Responses Example</h3>
+<pre><code>{
+    &quot;errCode&quot;: 200,
+    &quot;errMsg&quot;: &quot;Success&quot;
 }
 </code></pre><footer class="page-footer"><span class="copyright">&#xA9; Cyber-Life.cn Studio all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2022-05-19 09:09:50
+2022-06-04 21:37:20
 </span></footer>
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
@@ -1576,14 +1814,10 @@
 
             
                 
-                <a href="api-tags.html" class="navigation navigation-prev " aria-label="Previous page: Tags">
+                <a href="api-articles.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Articles">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="api-meta.html" class="navigation navigation-next " aria-label="Next page: Meta">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -1592,7 +1826,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Articles","level":"1.12","depth":1,"next":{"title":"Meta","level":"1.13","depth":1,"path":"api-meta.md","ref":"api-meta.md","articles":[]},"previous":{"title":"Tags","level":"1.11","depth":1,"path":"api-tags.md","ref":"api-tags.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","ace","theme-comscore","edit-link","tbfed-pagefooter","expandable-chapters","chapter-fold","back-to-top-button","code","pageview-count","popup","splitter","search-plus","-lunr","-search","anchors","mermaid-gb3"],"root":".","styles":{"website":"assets/continuum/cms.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Cyber-Life.cn Studio","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"pluginsConfig":{"expandable-chapters":{}},"ace":{},"github":{"url":"https://github.com/ThomasZh/jnr-api-doc"},"splitter":{},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"theme-comscore":{},"back-to-top-button":{},"pageview-count":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/ThomasZh/jnr-api-doc/blob/main/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"Thomas Zhang","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Jnr-Api-Doc","language":"zh-hans","gitbook":"*","description":"Jnr API Documents"},"file":{"path":"api-articles.md","mtime":"2022-05-19T01:09:50.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-06-04T13:39:30.902Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Meta","level":"1.13","depth":1,"previous":{"title":"Articles","level":"1.12","depth":1,"path":"api-articles.md","ref":"api-articles.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","ace","theme-comscore","edit-link","tbfed-pagefooter","expandable-chapters","chapter-fold","back-to-top-button","code","pageview-count","popup","splitter","search-plus","-lunr","-search","anchors","mermaid-gb3"],"root":".","styles":{"website":"assets/continuum/cms.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Cyber-Life.cn Studio","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"pluginsConfig":{"expandable-chapters":{}},"ace":{},"github":{"url":"https://github.com/ThomasZh/jnr-api-doc"},"splitter":{},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"theme-comscore":{},"back-to-top-button":{},"pageview-count":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/ThomasZh/jnr-api-doc/blob/main/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"Thomas Zhang","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Jnr-Api-Doc","language":"zh-hans","gitbook":"*","description":"Jnr API Documents"},"file":{"path":"api-meta.md","mtime":"2022-06-04T13:37:20.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-06-04T13:39:30.902Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
